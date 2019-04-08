@@ -1,5 +1,21 @@
 # Programming_and_Scripting_Project_2019
 
+
+### Table of Contents
+- Libaries 
+- Introduction 
+
+ 
+### Libraries required:
+- Numpy <a href=http://www.numpy.org/>Download here</a>
+
+- Pandas <a href=https://pandas.pydata.org/getpandas.html>Download here</a>
+
+- Matplotlib <a href=https://matplotlib.org/downloads.htmll>Download here</a>
+
+- anaconda on your device (version 3.7 +) <a href=https://www.anaconda.com/distribution/>Download here</a>
+
+
 ### Introduction:
 
  <img src="http://people.wku.edu/charles.smith/chronob/ANDERSON.jpg" width="300" title="Edgar Anderson" > <img src="http://www.genetics.org/content/genetics/154/4/1419/F1.medium.gif " width="263" title="Ronald Fisher"> 
@@ -13,4 +29,7 @@ The iris dataset originated from research carried out by Edgar Anderson (America
  
  
  <img src="https://www.oreilly.com/library/view/python-artificial-intelligence/9781789539462/assets/462dc4fa-fd62-4539-8599-ac80a441382c.png" width="263" title="Attributes measured"> 
+ 
+
+
  
