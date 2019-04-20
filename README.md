@@ -76,18 +76,11 @@ One flower species is linearly separable from the other two, but the other two a
 Boxplot is a grapical representation to show the distribution of data based on the five number summary: 
 
 - Median – refers to the middle value in the iris dataset
-
 - Lower quartile (Q1) - refers to the middle number between the smallest number and the median of the dataset 
-
 - Upper quartile (Q3)- refers to the middle number between the median and the highest value  of the dataset 
-
 - Maximum - Q3  + 1.5*IQR
-
 - Minimum  - Q3 – 1.5*IQR
-
   - Interquartile range (IQR) – Upper Quartile –Lower Quartile 
-
-
 
 <b> Advantages: </b> https://sciencing.com/advantages-disadvantages-box-plot-12025269.html; https://math.tutorvista.com/statistics/box-and-whisker-plot.html
 
@@ -102,31 +95,30 @@ Boxplot is a grapical representation to show the distribution of data based on t
 
 <i> Boxplots are best when used in combination with another statistical graph method e.g. histogram to give a  more thorough analysis of the iris dataset. </i>
 </p>
-          
-   
-    plt.figure(figsize=(12,10))                                                            
-    sns.boxplot(data=ds)                                                                   
-    # Format of boxplot 
-    plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")          
-    plt.ylabel("centimeters", fontweight="bold", fontsize="12", color="b")                
-    plt.show()                                                                                                                                                    
+
+         plt.figure(figsize=(12,10))                                                            
+         sns.boxplot(data=ds)                                                                   
+         # Format of boxplot 
+         plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")          
+         plt.ylabel("centimeters", fontweight="bold", fontsize="12", color="b")                
+         plt.show()                                                                                                             
 
 ![Boxplot](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot.PNG)
 
-    plt.figure(figsize=(14,10))                                                                               
-    ds_long = pd.melt(ds, id_vars='species')                                               
-    sns.boxplot(x='species', y='value', hue='variable', data=ds_long)                      
+        plt.figure(figsize=(14,10))                                                                               
+        ds_long = pd.melt(ds, id_vars='species')                                               
+        sns.boxplot(x='species', y='value', hue='variable', data=ds_long)                      
 
-    plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")          
-    plt.ylabel("centimeters", fontweight="bold", fontsize="12", color="b")                 
-    plt.xlabel("Species", fontweight="bold", fontsize="12", color="b")                     
-    plt.legend(bbox_to_anchor=(1, 1), loc=2)                                               
-    plt.margins(0)                                                                        
-    for i in range(len(ds['species'].unique())-1):                                        
-        plt.vlines(i+.5, 0, 8)                                                                                
+        plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")          
+        plt.ylabel("centimeters", fontweight="bold", fontsize="12", color="b")                 
+        plt.xlabel("Species", fontweight="bold", fontsize="12", color="b")                     
+        plt.legend(bbox_to_anchor=(1, 1), loc=2)                                               
+        plt.margins(0)                                                                        
+        for i in range(len(ds['species'].unique())-1):                                        
+            plt.vlines(i+.5, 0, 8)                                                                                
 
-    plt.show()     
-    
+        plt.show()     
+
 ![Boxplot by Species](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot2.PNG)
 
     plt.figure(figsize=(12,10))                                                                                
