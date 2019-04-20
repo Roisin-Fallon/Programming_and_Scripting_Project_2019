@@ -12,19 +12,19 @@ plt.figure(figsize=(12,10))                                                     
 sns.boxplot(data=ds)                                                                                        # Load iris datset via seaborne 
 # Format of boxplot 
 plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")                               # Title of graph
-plt.ylabel('cms', fontweight="bold", fontsize="12", color="b")                                              # Label of the y-axis
+plt.ylabel("centimeters", fontweight="bold", fontsize="12", color="b")                                      # Label of the y-axis
 plt.show()                                                                                                  # Display the boxplot 
 
 # Boxplot to represent each of the 3 species and each of the three 
 # Adapted from https://stackoverflow.com/a/40242457
 
 plt.figure(figsize=(14,10))                                                                                 # Resize the boxplot
-ds_long = pd.melt(ds, id_vars='species')                                                                   # melt allows the graphs to appear together 
+ds_long = pd.melt(ds, id_vars='species')                                                                    # melt allows the graphs to appear together 
 sns.boxplot(x='species', y='value', hue='variable', data=ds_long)                                           # ds_long refers to the format appearing as long rather than wide
 
 plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")                               # Title of graph
-plt.ylabel('centimeters', fontweight="bold", fontsize="12", color="b")                                      # Label of the y-axis
-plt.xlabel('Species', fontweight="bold", fontsize="12", color="b")                                          # Label of the x-axis
+plt.ylabel("centimeters", fontweight="bold", fontsize="12", color="b")                                      # Label of the y-axis
+plt.xlabel("Species", fontweight="bold", fontsize="12", color="b")                                          # Label of the x-axis
 plt.legend(bbox_to_anchor=(1, 1), loc=2)                                                                    # Legend of the data 
 plt.margins(0)                                                                                              # Margin to start at zero 
 for i in range(len(ds['species'].unique())-1):                                                              # Creates a division between the 3 species
@@ -44,26 +44,26 @@ plt.suptitle("Fisher Iris dataset grouped by species",fontweight="bold", fontsiz
 
 plt.subplot(2,2,1)
 plt.title("Sepal Length", fontweight="bold", fontsize="12", color="r")                                     # Title of graph
-plt.ylabel("Sepal Length", fontweight="bold", fontsize="10", color="b")                                     # Label of the y-axis
-plt.xlabel('Species', fontweight="bold", fontsize="10", color="b")                                         # Label of the x-axis
+plt.ylabel("Sepal Length", fontweight="bold", fontsize="10", color="b")                                    # Label of the y-axis
+plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                         # Label of the x-axis
 sns.boxplot(x="species",y="sepal_length",data=ds)
 
 plt.subplot(2,2,2)
 plt.title("Sepal Width", fontweight="bold", fontsize="12", color="r")                                     # Title of graph
-plt.ylabel("Sepal Width", fontweight="bold", fontsize="10", color="b")                                     # Label of the y-axis
-plt.xlabel('Species', fontweight="bold", fontsize="10", color="b")                                        # Label of the x-axis     
+plt.ylabel("Sepal Width", fontweight="bold", fontsize="10", color="b")                                    # Label of the y-axis
+plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                        # Label of the x-axis     
 sns.boxplot(x="species",y="sepal_width", data=ds)
 
 plt.subplot(2,2,3)
 plt.title("Petal Length", fontweight="bold", fontsize="12", color="r")                                    # Title of graph
-plt.ylabel("Petal Length", fontweight="bold", fontsize="10", color="b")                                    # Label of the y-axis
-plt.xlabel('Species', fontweight="bold", fontsize="10", color="b")                                        # Label of the x-axis  
+plt.ylabel("Petal Length", fontweight="bold", fontsize="10", color="b")                                   # Label of the y-axis
+plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                        # Label of the x-axis  
 sns.boxplot(x="species",y="petal_length",data=ds)
 
 plt.subplot(2,2,4)
 plt.title("Petal Width", fontweight="bold", fontsize="12", color="r")                                     # Title of graph
-plt.ylabel("Petal Width", fontweight="bold", fontsize="10", color="b")                                     # Label of the y-axis
-plt.xlabel('Species', fontweight="bold", fontsize="10", color="b")                                        # Label of the x-axis
+plt.ylabel("Petal Width", fontweight="bold", fontsize="10", color="b")                                    # Label of the y-axis
+plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                        # Label of the x-axis
 sns.boxplot(x="species",y="petal_width",data=ds)
 
 plt.show()                                                                                                # Display the boxplot
