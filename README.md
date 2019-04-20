@@ -102,15 +102,129 @@ Boxplot is a grapical representation to show the distribution of data based on t
 
 <i> Boxplots are best when used in combination with another statistical graph method e.g. histogram to give a  more thorough analysis of the iris dataset. </i>
 </p>
+          
+   
+    plt.figure(figsize=(12,10))                                                            
+    sns.boxplot(data=ds)                                                                   
+    # Format of boxplot 
+    plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")          
+    plt.ylabel("centimeters", fontweight="bold", fontsize="12", color="b")                
+    plt.show()                                                                                                                                                    
 
 ![Boxplot](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot.PNG)
+
+    plt.figure(figsize=(14,10))                                                                               
+    ds_long = pd.melt(ds, id_vars='species')                                               
+    sns.boxplot(x='species', y='value', hue='variable', data=ds_long)                      
+
+    plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")          
+    plt.ylabel("centimeters", fontweight="bold", fontsize="12", color="b")                 
+    plt.xlabel("Species", fontweight="bold", fontsize="12", color="b")                     
+    plt.legend(bbox_to_anchor=(1, 1), loc=2)                                               
+    plt.margins(0)                                                                        
+    for i in range(len(ds['species'].unique())-1):                                        
+        plt.vlines(i+.5, 0, 8)                                                                                
+
+    plt.show()     
+    
 ![Boxplot by Species](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot2.PNG)
+
+    plt.figure(figsize=(12,10))                                                                                
+    plt.suptitle("Fisher Iris dataset grouped by species",fontweight="bold", fontsize="12", color="g" )        
+
+    plt.subplot(2,2,1)
+    plt.title("Sepal Length", fontweight="bold", fontsize="12", color="r")                                    
+    plt.ylabel("Sepal Length", fontweight="bold", fontsize="10", color="b")                                    
+    plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                        
+    sns.boxplot(x="species",y="sepal_length",data=ds)
+
+    plt.subplot(2,2,2)
+    plt.title("Sepal Width", fontweight="bold", fontsize="12", color="r")                                    
+    plt.ylabel("Sepal Width", fontweight="bold", fontsize="10", color="b")                                    
+    plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                            
+    sns.boxplot(x="species",y="sepal_width", data=ds)
+
+    plt.subplot(2,2,3)
+    plt.title("Petal Length", fontweight="bold", fontsize="12", color="r")                                    
+    plt.ylabel("Petal Length", fontweight="bold", fontsize="10", color="b")                                   
+    plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                        
+    sns.boxplot(x="species",y="petal_length",data=ds)
+
+    plt.subplot(2,2,4)
+    plt.title("Petal Width", fontweight="bold", fontsize="12", color="r")                                     
+    plt.ylabel("Petal Width", fontweight="bold", fontsize="10", color="b")                                     
+    plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                        
+    sns.boxplot(x="species",y="petal_width",data=ds)
+
+    plt.show()    
+  
 ![Boxplot by Attribute](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot3.PNG)
 
 ### Histograms
+
+    f, axes = plt.subplots(2, 2, figsize=(12, 10), dpi=100)                                                         
+    plt.suptitle("Fisher Iris Distribution of Data",fontweight="bold", fontsize="12", color="g" )                   
+
+    plt.subplot(2,2,1)                                                                                              
+    sns.distplot(ds.loc[ds.species=='setosa', "sepal_length"] , color="dodgerblue", label="setosa")                 
+    sns.distplot(ds.loc[ds.species=='virginica', "sepal_length"] , color="orange", label="virginica")              
+    sns.distplot(ds.loc[ds.species=='versicolor', "sepal_length"] , color="deeppink", label="versicolor")           
+    plt.xlabel("Sepal Length", fontweight="bold", fontsize="12", color="b")                                         
+    plt.ylabel("Frequency", fontweight="bold", fontsize="12", color="b")                                          
+    plt.title("Iris Sepal Length Histogram", fontweight="bold", fontsize="10", color="r") 
+
+    plt.subplot(2,2,2)                                                                                              
+    sns.distplot( ds.loc[ds.species=='setosa', "sepal_width"] , color="dodgerblue", label="setosa")                  
+    sns.distplot( ds.loc[ds.species=='virginica', "sepal_width"] , color="orange", label="virginica")               
+    sns.distplot( ds.loc[ds.species=='versicolor', "sepal_width"] , color="deeppink", label="versicolor")           
+    plt.xlabel("Sepal Width", fontweight="bold", fontsize="12", color="b")                                         
+    plt.ylabel("Frequency", fontweight="bold", fontsize="12", color="b")                                           
+    plt.title('Iris Sepal Width Histogram', fontweight="bold", fontsize="10", color="r")
+
+
+    plt.subplot(2,2,3)                                                                                              
+    sns.distplot( ds.loc[ds.species=='setosa', "petal_length"] , color="dodgerblue", label="setosa")               
+    sns.distplot( ds.loc[ds.species=='virginica', "petal_length"] , color="orange", label="virginica")              
+    sns.distplot( ds.loc[ds.species=='versicolor', "petal_length"] , color="deeppink", label="versicolor")          
+    plt.xlabel("Petal Length", fontweight="bold", fontsize="12", color="b")                                         
+    plt.ylabel('Frequency', fontweight="bold", fontsize="12", color="b")                                            
+    plt.title('Iris Petal Length Histogram', fontweight="bold", fontsize="10", color="r")                           
+
+
+    plt.subplot(2,2,4)                                                                                              
+    sns.distplot( ds.loc[ds.species=='setosa', "petal_width"] , color="dodgerblue", label="setosa")               
+    sns.distplot( ds.loc[ds.species=='virginica', "petal_width"] , color="orange", label="virginica")              
+    sns.distplot( ds.loc[ds.species=='versicolor', "petal_width"] , color="deeppink", label="versicolor")          
+    plt.xlabel("Petal Width", fontweight="bold", fontsize="12", color="b")                                         
+    plt.ylabel('Frequency', fontweight="bold", fontsize="12", color="b")                                          
+    plt.title('Iris Petal Width Histogram', fontweight="bold", fontsize="10", color="r")                           
+    plt.legend(bbox_to_anchor=(1,2), loc=2)                                                                       
+    plt.show()                                                                                                    
+
 ![Distplots by Attribute](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/dist.PNG)
 
 ### Scatterplots:
+
+    plt.figure(figsize=(12,10))  
+    
+    # Scatterplot for petal comparasion for each species 
+    
+    plt.subplot(2,2,1)                                                                                              
+    ax = sns.scatterplot(x="petal_length", y="petal_width", hue="species",style= ds.species, data=ds)               
+    plt.xlabel("Petal Length (cm)", fontweight="bold", fontsize="12", color="b")                                    
+    plt.ylabel("Petal Width (cm)", fontweight="bold", fontsize="12", color="b")                                     
+    plt.title("Petal Comparasion for each species", fontweight="bold", fontsize="12", color="r")                    
+
+    # Scatterplot for sepal comparasion for each species
+    
+    plt.subplot(2,2,2)                                                                                              
+    ax = sns.scatterplot(x="sepal_length", y="sepal_width", hue="species",style=ds.species, data=ds)                
+    plt.xlabel("Sepal Length (cm)", fontweight="bold", fontsize="12", color="b")                                    
+    plt.ylabel("Sepal Width (cm)", fontweight="bold", fontsize="12", color="b")                                     
+    plt.title("Sepal Comparasion for each iris species", fontweight="bold", fontsize="12", color="r")              
+
+    plt.show()        
+
 ![Scatterplots](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/scatterplot.PNG)
  ## Bibliography:
 1. Kozak, Marcin & Łotocka, Barbara. (2013). What should we know about the famous Iris data?. Current science. 104. 579-580.​
