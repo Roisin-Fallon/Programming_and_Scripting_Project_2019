@@ -69,8 +69,19 @@ One flower species is linearly separable from the other two, but the other two a
  
  <img src="https://www.oreilly.com/library/view/python-artificial-intelligence/9781789539462/assets/462dc4fa-fd62-4539-8599-ac80a441382c.png" width="263" title="Attributes measured"> 
  
+ 
+### Visualize the dataset:
+### Boxplots:
 
+![Boxplot](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot.PNG)
+![Boxplot by Species](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot2.PNG)
+![Boxplot by Attribute](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot3.PNG)
 
+### Histograms
+![Distplots by Attribute](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/dist.PNG)
+
+### Scatterplots:
+![Scatterplots](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/scatterplot.PNG)
  ## Bibliography:
 1. Kozak, Marcin & Łotocka, Barbara. (2013). What should we know about the famous Iris data?. Current science. 104. 579-580.​
 
