@@ -48,7 +48,7 @@ The data set consists of:
 
              - Iris virginica 
 
-              - Iris versicolor
+             - Iris versicolor
 
 
 - 4 numeric features measure in cm
@@ -72,6 +72,36 @@ One flower species is linearly separable from the other two, but the other two a
  
 ### Visualize the dataset:
 ### Boxplots:
+<p>
+Boxplot is a grapical representation to show the distribution of data based on the five number summary: 
+
+- Median – refers to the middle value in the iris dataset
+
+- Lower quartile (Q1) - refers to the middle number between the smallest number and the median of the dataset 
+
+- Upper quartile (Q3)- refers to the middle number between the median and the highest value  of the dataset 
+
+- Maximum - Q3  + 1.5*IQR
+
+- Minimum  - Q3 – 1.5*IQR
+
+  - Interquartile range (IQR) – Upper Quartile –Lower Quartile 
+
+
+
+<b> Advantages: </b> https://sciencing.com/advantages-disadvantages-box-plot-12025269.html; https://math.tutorvista.com/statistics/box-and-whisker-plot.html
+
+1. Clear and easy to understand
+2. Shows the presence of outliers - one of very few statistical graph methods that show outliers
+3. Shows the distribution of data in a dataset
+4. Easily compare the different boxplots within the iris dataset
+5. Handle and present summary of large amount of data
+
+<b> Disadvantages:</b>
+1. Exact values and details of the distribution results are not shown 
+
+<i> Boxplots are best when used in combination with another statistical graph method e.g. histogram to give a  more thorough analysis of the iris dataset. </i>
+</p>
 
 ![Boxplot](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot.PNG)
 ![Boxplot by Species](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot2.PNG)
