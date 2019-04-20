@@ -69,8 +69,28 @@ One flower species is linearly separable from the other two, but the other two a
  
  <img src="https://www.oreilly.com/library/view/python-artificial-intelligence/9781789539462/assets/462dc4fa-fd62-4539-8599-ac80a441382c.png" width="263" title="Attributes measured"> 
  
+ ## Summarize the dataset:
+
+     # To summarise the data for iris overall dataset
+     print("Summary statistics for iris entire dataset:")
+     print(sp.describe())
+
+
+     # To summarise the data for iris overall iris setosa
+     print("Summary statistics for iris setosa dataset:")
+     summary = print(setosa.describe())
+
+     # To summarise the data for iris overall iris versicolor 
+     print("Summary statistics for iris versicolor dataset:")                                            
+     print(versicolor.describe())
+
+     # To summarise the data for iris overall iris virginica  
+     print("Summary statistics for iris virginica dataset:")                                          
+     print(virginica.describe())
+
  
 ### Visualize the dataset:
+
 ### Boxplots:
 <p>
 Boxplot is a grapical representation to show the distribution of data based on the five number summary: 
@@ -219,7 +239,7 @@ Boxplot is a grapical representation to show the distribution of data based on t
 
 ![Scatterplots](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/scatterplot.PNG)
  ## Bibliography:
-1. Kozak, Marcin & Łotocka, Barbara. (2013). What should we know about the famous Iris data?. Current science. 104. 579-580.​
+1. Kozak, Marcin & Łotocka, Barbara. (2013). What should we know about the famous Iris data?. Current science. 104. 579-580.
 
 2. Ronald A Fisher, The Use of Multiple Measurements in Taxonomic Problems, Annals of Eugenics 7 (1936), no. 2, 179–18
  
