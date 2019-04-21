@@ -5,17 +5,6 @@
 - Libaries 
 - Introduction 
 
- 
-### Libraries required:
-
-- Numpy <a href=http://www.numpy.org/>Download here</a>
-
-- Pandas <a href=https://pandas.pydata.org/getpandas.html>Download here</a>
-
-- Matplotlib <a href=https://matplotlib.org/downloads.htmll>Download here</a>
-
-- anaconda on your device (version 3.7 +) <a href=https://www.anaconda.com/distribution/>Download here</a>
-
 
 ### Introduction:
 
@@ -61,7 +50,39 @@ Based on the combination of the four numeric features, the classification of the
 One flower species is linearly separable from the other two, but the other two are not linearly separable from each other.
  
  <img src="https://www.oreilly.com/library/view/python-artificial-intelligence/9781789539462/assets/462dc4fa-fd62-4539-8599-ac80a441382c.png" width="263" title="Attributes measured"> 
-     
+
+## Python Libraries:
+
+<b> Anaconda on your device (version 3.7 +) </b>
+
+ <a href=https://www.anaconda.com/distribution/> Download here </a>
+
+This contains porting for the library listed below. By downloading Anaconda it removes the need to import numerous libraries seperately.
+ 
+ <b> Pandas </b> 
+ 
+ <a href=https://pandas.pydata.org/getpandas.html> Download here </a>
+ 
+This is a Python package designed to strucure information in rows and columns.  It is known for quick and easy data manipulation, aggregation, and visualization.  Python takes in data via a CSV, TSV file or SQL database and creates a Python object called a data frame. Brief Introducton of Panda outlined <a href=https://towardsdatascience.com/a-quick-introduction-to-the-pandas-python-library-f1b678f34673> here. </a>
+
+<b> NumPy </b> 
+
+<a href=http://www.numpy.org/> Download here </a>
+
+This is a numerical library, performs many mathematical operations and handles i.  Brief introductiion outlined <a href=https://towardsdatascience.com/a-quick-introduction-to-the-numpy-library-6f61b7dee4db> here. </a>
+
+<b> Matplotlib </b> 
+
+<a href=https://matplotlib.org/downloads.htmll> Download here </a>
+
+This is a plotting library, makes  2D plots  that helps in the visualisation of figures using one or multiple numeric variables. It can generate histograms, pie charts, time series, boxplot, violin plot, stack plot, stem plots and scatter plots.  It can be used in Python scripts, Jupyter notebook, and web application servers.  Brief Introduction outlined  <a href=https://towardsdatascience.com/data-visualization-using-matplotlib-16f1aae5ce70> here. </a>
+
+<b> Seaborn </b>
+
+This a satistical plotting library  which has more advanced data visualisation than matplotlib (both are plotting libraries). Seaborn produces nice visualizations eliminating much of the work necessary for producing similar visualizations with matplotlib. It gives a high-level interface to draw statistical graphs, making it easier to generate more complex visualizations. Brief introduction outlined <a href=https://towardsdatascience.com/data-visualization-using-seaborn-fc24db95a850; > here. </a>
+
+https://www.codecademy.com/learn/data-visualization-python/modules/dspath-seaborn
+
 # Dataset Summary: 
 
 <b> A. Shape </b>
@@ -179,7 +200,7 @@ Lists the last 4 rows for virginica species.
 
 ## Statistics of the iris dataset:
 
-I. Summarise the data for iris overall dataset. This is a more efficient method than coding median, mean, min, max, standard deviation separately.
+A. Summarise the data for iris overall dataset. This is a more efficient method than coding median, mean, min, max, standard deviation separately.
 
     print("Summary statistics for iris entire dataset:")
     print(ds.describe())
@@ -187,7 +208,7 @@ I. Summarise the data for iris overall dataset. This is a more efficient method 
 
 ![describe entire iris dataset](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/describe-all.PNG)
 
-II. Summarise the data for iris setosa.
+B. Summarise the data for iris setosa.
 
     print("Summary statistics for iris setosa dataset:")
     summary = print(setosa.describe())
@@ -195,7 +216,7 @@ II. Summarise the data for iris setosa.
 
 ![describe setosa](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/describe-setosa.PNG)
 
-III. Summarise the data for iris versicolor.
+C. Summarise the data for iris versicolor.
 
     print("Summary statistics for iris versicolor dataset:")                                         
     print(versicolor.describe())
@@ -203,7 +224,7 @@ III. Summarise the data for iris versicolor.
 
 ![describe versicolor](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/describe-versicolor.PNG)
 
-IV. Summarise the data for iris virginica.
+D. Summarise the data for iris virginica.
 
     print("Summary statistics for iris virginica dataset:")                                          
     print(virginica.describe())
@@ -215,14 +236,19 @@ IV. Summarise the data for iris virginica.
 
 ### Boxplots:
 <p>
-Boxplot is a grapical representation to show the distribution of data based on the five number summary: 
+ 
+ Boxplot is a grapical representation to show the distribution of data based on the five number summary:  
 
-- Median – refers to the middle value in the iris dataset
+<img align="right" src="https://pro.arcgis.com/en/pro-app/help/analysis/geoprocessing/charts/GUID-0E2C3730-C535-40CD-8152-80D794A996A7-web.png" width=250 title="Boxplot Attributes"> 
+ 
+ - Median – refers to the middle value in the iris dataset
 - Lower quartile (Q1) - refers to the middle number between the smallest number and the median of the dataset 
 - Upper quartile (Q3)- refers to the middle number between the median and the highest value  of the dataset 
 - Maximum - Q3  + 1.5*IQR
 - Minimum  - Q3 – 1.5*IQR
-  - Interquartile range (IQR) – Upper Quartile –Lower Quartile 
+
+  - Interquartile range (IQR) = Upper Quartile –Lower Quartile 
+
 
 <b> Advantages: </b> https://sciencing.com/advantages-disadvantages-box-plot-12025269.html; https://math.tutorvista.com/statistics/box-and-whisker-plot.html
 
