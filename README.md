@@ -43,23 +43,16 @@ The data set consists of:
 - There is no missing data
 - Iris dataset is classified into 5 variables
 - Flower species- Categorical data can be divided into 3 classes
-
-             - Iris setosa
-
-             - Iris virginica 
-
-             - Iris versicolor
+  - Iris setosa
+  - Iris virginica 
+  - Iris versicolor
 
 
 - 4 numeric features measure in cm
-
-            - Petal width in cm 
-
-            - Petal length in cm 
-
-            - Sepal width in cm 
-
-            - Sepal length in cm 
+  - Petal width in cm 
+  - Petal length in cm 
+  - Sepal width in cm 
+  - Sepal length in cm 
 
 
 Image below depicts the difference between the petal and sepal.  Sepal is defined as the outermost structure of the flower, that  surround the more fragile parts of the flower .e.g. petals. Typically the petals can be  distinguished as being small and green  and the petals are colorful. However, this is not applicable to the iris flower species. Note in this image of the Iris Virginica  the sepals are larger than the petals  and are drooping, while the petals are upright.​
@@ -68,26 +61,155 @@ Based on the combination of the four numeric features, the classification of the
 One flower species is linearly separable from the other two, but the other two are not linearly separable from each other.
  
  <img src="https://www.oreilly.com/library/view/python-artificial-intelligence/9781789539462/assets/462dc4fa-fd62-4539-8599-ac80a441382c.png" width="263" title="Attributes measured"> 
+     
+# Dataset Summary: 
+
+<b> A. Shape </b>
+
+Cofirms the shape of the iris dataset in terms of the number of rows and columns. 
+
+    print("Number of rows and columns:")  
+    print(ds.shape)                                                       
+    print("\n")
+    
+   ![Shape of Iris dataset](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/shape.PNG)
  
- ## Summarize the dataset:
+ <b> B. Columns </b>
+    
+ The names of the columns of your dataset. 
+    
+    print("Name of each column in the iris dataset:")  
+    print(ds.columns)                                                       
+    print("\n")
+    
+![Column data type](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/columns.PNG)
 
-     # To summarise the data for iris overall dataset
-     print("Summary statistics for iris entire dataset:")
-     print(sp.describe())
+ <b> C. Info </b>
+    
+ Provides information on the iris dataset including names of columns, total number of rows and columns, data type of each column, range index and memory usage.
+ 
+    print("Information about iris dataset:") 
+    print(ds.info())
+    print("\n")
+    
+![Info of Iris dataset](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/info.PNG)
 
 
-     # To summarise the data for iris overall iris setosa
-     print("Summary statistics for iris setosa dataset:")
-     summary = print(setosa.describe())
+ <b> C. Unique </b>
+ 
+ Check how many unique species of iris are in the dataset.
+    
+    print("Unique species:")  
+    print(ds['species'].unique())                                                
+    print("\n")
 
-     # To summarise the data for iris overall iris versicolor 
-     print("Summary statistics for iris versicolor dataset:")                                            
-     print(versicolor.describe())
+![Unique Species](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/uniques-species.PNG)
 
-     # To summarise the data for iris overall iris virginica  
-     print("Summary statistics for iris virginica dataset:")                                          
-     print(virginica.describe())
+<b> D. IsNull </b>
 
+Determine if there is any null values in the dataset. This confirms there is no null values in the iris dataset. 
+
+    print("Null values present:")
+    print(ds.isnull().any())
+    print("\n")
+
+![Presence of null values](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/isnull.PNG)
+
+<b> E. Class Distribution: </b>
+
+Class distribution - number of rows that belong to each species. This shows that data is distributed equally across the 3 species.
+    
+    print("Class Distribution:")  
+    print(ds.groupby('species').size())                                             
+    print("\n")
+
+![Class Distribution](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/class.PNG)
+
+<b> F. Head of each species: </b>
+
+Lists the top 4 rows for setosa species.
+
+    print("First 4 setosa values:") 
+    print(setosa.head(4))
+    print("\n")
+    
+![setosa head](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/head-setosa.PNG)
+
+Lists the top 4 rows for versicolor species.
+
+    print("First 4 versicolor values:") 
+    print(versicolor.head(4))
+    print("\n")
+
+![versicolor head](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/head-versicolor.PNG)
+
+Lists the top 4 rows for virginica species.
+
+    print("First 4 virginica values:") 
+    print(virginica.head(4))
+    print("\n")
+
+![virginica head](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/head-virginica.PNG)
+
+<b> G. Tail of each species: </b>
+
+Lists the last 4 rows for setosa species.
+
+    print("Last 4 setosa values:")  
+    print(setosa.tail(4))
+    print("\n")
+
+![setosa tail](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/tail-setosa.PNG)
+
+Lists the last 4 rows for versicolor species.
+
+    print("Last 4 versicolor values:")  
+    print(versicolor.tail(4))
+    print("\n")
+
+![versicolor tail](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/tail-versicolor.PNG)
+
+Lists the last 4 rows for virginica species.
+
+    print("Last 4 virginica values:")  
+    print(virginica.tail(4))
+    print("\n")
+
+![virginica tail](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/tail-virginica.PNG)
+
+## Statistics of the iris dataset:
+
+I. Summarise the data for iris overall dataset. This is a more efficient method than coding median, mean, min, max, standard deviation separately.
+
+    print("Summary statistics for iris entire dataset:")
+    print(ds.describe())
+    print("\n")                                                            
+
+![describe entire iris dataset](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/describe-all.PNG)
+
+II. Summarise the data for iris setosa.
+
+    print("Summary statistics for iris setosa dataset:")
+    summary = print(setosa.describe())
+    print("\n")
+
+![describe setosa](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/describe-setosa.PNG)
+
+III. Summarise the data for iris versicolor.
+
+    print("Summary statistics for iris versicolor dataset:")                                         
+    print(versicolor.describe())
+    print("\n")
+
+![describe versicolor](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/describe-versicolor.PNG)
+
+IV. Summarise the data for iris virginica.
+
+    print("Summary statistics for iris virginica dataset:")                                          
+    print(virginica.describe())
+    print("\n")
+
+![describe virginica](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/describe-virginica.PNG)
  
 ### Visualize the dataset:
 
