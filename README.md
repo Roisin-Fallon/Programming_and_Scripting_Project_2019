@@ -18,6 +18,10 @@
     * [ Head of each species ](#head)
     * [ Tail of each species ](#tail)
 7. [Statistics of the Iris Dataset](#stat)
+8. [Visualize the dataset](#visualize)
+    * [Boxplot](#box)
+    * [ Histograms ](#hist)
+    * [ Scatterplot ](#scatter)
     
 
 
@@ -369,9 +373,11 @@ D. Summarise the data for iris virginica.
 </details> 
 
 ![describe virginica](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/describe-virginica.PNG)
- 
+
+<a name="visualize"></a>
 ### Visualize the dataset:
 
+<a name="box"></a>
 ### Boxplots:
 <p>
  
@@ -491,6 +497,7 @@ D. Summarise the data for iris virginica.
 
 ![Boxplot by Attribute](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot3.PNG)
 
+<a name="hist"></a>
 ### Histograms
 
 <details><summary>Python Code</summary>
@@ -542,6 +549,7 @@ D. Summarise the data for iris virginica.
  
 ![Distplots by Attribute](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/dist.PNG)
 
+<a name="scatter"></a>
 ### Scatterplots:
 
     plt.figure(figsize=(12,10))  
