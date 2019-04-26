@@ -406,9 +406,12 @@ D. Summarise the data for iris virginica.
 <p>
    
       # Boxplot of the total iris dataset not specified for species
+      
       plt.figure(figsize=(12,10))                                                                        # Resize the boxplot
       sns.boxplot(data=ds)                                                                               # Load iris datset via seaborne 
+      
       # Format of boxplot 
+      
       plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")                      # Title of graph
       plt.ylabel("centimeters", fontweight="bold", fontsize="12", color="b")                             # Label of the y-axis
       plt.show()   
@@ -435,7 +438,7 @@ D. Summarise the data for iris virginica.
       plt.legend(bbox_to_anchor=(1, 1), loc=2)                                                # Legend of the data 
       plt.margins(0)                                                                          # Margin to start at zero 
       for i in range(len(ds['species'].unique())-1):                                          # Creates a division between the 3 species
-          plt.vlines(i+.5, 0, 8)                                                                                
+          plt.vlines(i+.5, 0, 8)                                                              # plot vertical lines                 
 
       plt.show()                                                                              # Display the boxplot
 
@@ -445,78 +448,98 @@ D. Summarise the data for iris virginica.
 
 ![Boxplot by Species](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot2.PNG)
 
-    plt.figure(figsize=(12,10))                                                                                
-    plt.suptitle("Fisher Iris dataset grouped by species",fontweight="bold", fontsize="12", color="g" )        
 
-    plt.subplot(2,2,1)
-    plt.title("Sepal Length", fontweight="bold", fontsize="12", color="r")                                    
-    plt.ylabel("Sepal Length", fontweight="bold", fontsize="10", color="b")                                    
-    plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                        
-    sns.boxplot(x="species",y="sepal_length",data=ds)
+<details><summary>Python Code</summary>
+<p>
+ 
+      # Boxplot to compare each of the attributes in the 3 species:
+      # Adapted from:
+      # https://s3.amazonaws.com/assets.datacamp.com/production/course_5368/slides/chapter4.pdf
+      # http://www.learn4master.com/machine-learning/visualize-iris-dataset-using-python
 
-    plt.subplot(2,2,2)
-    plt.title("Sepal Width", fontweight="bold", fontsize="12", color="r")                                    
-    plt.ylabel("Sepal Width", fontweight="bold", fontsize="10", color="b")                                    
-    plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                            
-    sns.boxplot(x="species",y="sepal_width", data=ds)
+      plt.figure(figsize=(12,10))                                                                                # Figure Size
+      plt.suptitle("Fisher Iris dataset grouped by species",fontweight="bold", fontsize="12", color="g" )        # Title of overall graph
 
-    plt.subplot(2,2,3)
-    plt.title("Petal Length", fontweight="bold", fontsize="12", color="r")                                    
-    plt.ylabel("Petal Length", fontweight="bold", fontsize="10", color="b")                                   
-    plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                        
-    sns.boxplot(x="species",y="petal_length",data=ds)
+      plt.subplot(2,2,1)
+      plt.title("Sepal Length", fontweight="bold", fontsize="12", color="r")                                     # Title of graph
+      plt.ylabel("Sepal Length", fontweight="bold", fontsize="10", color="b")                                    # Label of the y-axis
+      plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                         # Label of the x-axis
+      sns.boxplot(x="species",y="sepal_length",data=ds)
 
-    plt.subplot(2,2,4)
-    plt.title("Petal Width", fontweight="bold", fontsize="12", color="r")                                     
-    plt.ylabel("Petal Width", fontweight="bold", fontsize="10", color="b")                                     
-    plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                        
-    sns.boxplot(x="species",y="petal_width",data=ds)
+      plt.subplot(2,2,2)
+      plt.title("Sepal Width", fontweight="bold", fontsize="12", color="r")                                     # Title of graph
+      plt.ylabel("Sepal Width", fontweight="bold", fontsize="10", color="b")                                    # Label of the y-axis
+      plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                        # Label of the x-axis     
+      sns.boxplot(x="species",y="sepal_width", data=ds)
 
-    plt.show()    
-  
+      plt.subplot(2,2,3)
+      plt.title("Petal Length", fontweight="bold", fontsize="12", color="r")                                    # Title of graph
+      plt.ylabel("Petal Length", fontweight="bold", fontsize="10", color="b")                                   # Label of the y-axis
+      plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                        # Label of the x-axis  
+      sns.boxplot(x="species",y="petal_length",data=ds)
+
+      plt.subplot(2,2,4)
+      plt.title("Petal Width", fontweight="bold", fontsize="12", color="r")                                     # Title of graph
+      plt.ylabel("Petal Width", fontweight="bold", fontsize="10", color="b")                                    # Label of the y-axis
+      plt.xlabel("Species", fontweight="bold", fontsize="10", color="b")                                        # Label of the x-axis
+      sns.boxplot(x="species",y="petal_width",data=ds)
+
+      plt.show()                                                                                                # Display the boxplot
+    
+</p>
+</details> 
+
 ![Boxplot by Attribute](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot3.PNG)
 
 ### Histograms
 
-    f, axes = plt.subplots(2, 2, figsize=(12, 10), dpi=100)                                                         
-    plt.suptitle("Fisher Iris Distribution of Data",fontweight="bold", fontsize="12", color="g" )                   
+<details><summary>Python Code</summary>
+<p>
+ 
 
-    plt.subplot(2,2,1)                                                                                              
-    sns.distplot(ds.loc[ds.species=='setosa', "sepal_length"] , color="dodgerblue", label="setosa")                 
-    sns.distplot(ds.loc[ds.species=='virginica', "sepal_length"] , color="orange", label="virginica")              
-    sns.distplot(ds.loc[ds.species=='versicolor', "sepal_length"] , color="deeppink", label="versicolor")           
-    plt.xlabel("Sepal Length", fontweight="bold", fontsize="12", color="b")                                         
-    plt.ylabel("Frequency", fontweight="bold", fontsize="12", color="b")                                          
-    plt.title("Iris Sepal Length Histogram", fontweight="bold", fontsize="10", color="r") 
+      f, axes = plt.subplots(2, 2, figsize=(12, 10), dpi=100)                                                         # Figsize and dpi(dot-per-inch)
+      plt.suptitle("Fisher Iris Distribution of Data",fontweight="bold", fontsize="12", color="g" )                   # Overall heading for the graph
 
-    plt.subplot(2,2,2)                                                                                              
-    sns.distplot( ds.loc[ds.species=='setosa', "sepal_width"] , color="dodgerblue", label="setosa")                  
-    sns.distplot( ds.loc[ds.species=='virginica', "sepal_width"] , color="orange", label="virginica")               
-    sns.distplot( ds.loc[ds.species=='versicolor', "sepal_width"] , color="deeppink", label="versicolor")           
-    plt.xlabel("Sepal Width", fontweight="bold", fontsize="12", color="b")                                         
-    plt.ylabel("Frequency", fontweight="bold", fontsize="12", color="b")                                           
-    plt.title('Iris Sepal Width Histogram', fontweight="bold", fontsize="10", color="r")
+      plt.subplot(2,2,1)                                                                                              # Makes a top left subplot active in a 2x2 subplot layout
+      sns.distplot(ds.loc[ds.species=='setosa', "sepal_length"] , color="dodgerblue", label="setosa")                 # Plot setosa species sepal length
+      sns.distplot(ds.loc[ds.species=='virginica', "sepal_length"] , color="orange", label="virginica")               # Plot virginica species sepal length
+      sns.distplot(ds.loc[ds.species=='versicolor', "sepal_length"] , color="deeppink", label="versicolor")           # Plot versicolor species sepal length
+      plt.xlabel("Sepal Length", fontweight="bold", fontsize="12", color="b")                                         # Label of the x-axis
+      plt.ylabel("Frequency", fontweight="bold", fontsize="12", color="b")                                            # Label of the y-axis
+      plt.title("Iris Sepal Length Histogram", fontweight="bold", fontsize="10", color="r") 
+
+      plt.subplot(2,2,2)                                                                                              # Makes a top right subplot active in a 2x2 subplot layout
+      sns.distplot( ds.loc[ds.species=='setosa', "sepal_width"] , color="dodgerblue", label="setosa")                 # Plot setosa species sepal width
+      sns.distplot( ds.loc[ds.species=='virginica', "sepal_width"] , color="orange", label="virginica")               # Plot virginica species sepal width
+      sns.distplot( ds.loc[ds.species=='versicolor', "sepal_width"] , color="deeppink", label="versicolor")           # Plot versicolor species sepal width
+      plt.xlabel("Sepal Width", fontweight="bold", fontsize="12", color="b")                                          # Label of the x-axis
+      plt.ylabel("Frequency", fontweight="bold", fontsize="12", color="b")                                            # Label of the y-axis
+      plt.title('Iris Sepal Width Histogram', fontweight="bold", fontsize="10", color="r")
+
+      plt.subplot(2,2,3)                                                                                              # Makes a bottom left subplot active in a 2x2 subplot layout
+      sns.distplot( ds.loc[ds.species=='setosa', "petal_length"] , color="dodgerblue", label="setosa")                # Plot setosa species petal length
+      sns.distplot( ds.loc[ds.species=='virginica', "petal_length"] , color="orange", label="virginica")              # Plot virginica species petal length
+      sns.distplot( ds.loc[ds.species=='versicolor', "petal_length"] , color="deeppink", label="versicolor")          # Plot versicolor species petal length
+      plt.xlabel("Petal Length", fontweight="bold", fontsize="12", color="b")                                         # Label of the x-axis
+      plt.ylabel('Frequency', fontweight="bold", fontsize="12", color="b")                                            # Label of the y-axis
+      plt.title('Iris Petal Length Histogram', fontweight="bold", fontsize="10", color="r")                           # Label title of distplot
 
 
-    plt.subplot(2,2,3)                                                                                              
-    sns.distplot( ds.loc[ds.species=='setosa', "petal_length"] , color="dodgerblue", label="setosa")               
-    sns.distplot( ds.loc[ds.species=='virginica', "petal_length"] , color="orange", label="virginica")              
-    sns.distplot( ds.loc[ds.species=='versicolor', "petal_length"] , color="deeppink", label="versicolor")          
-    plt.xlabel("Petal Length", fontweight="bold", fontsize="12", color="b")                                         
-    plt.ylabel('Frequency', fontweight="bold", fontsize="12", color="b")                                            
-    plt.title('Iris Petal Length Histogram', fontweight="bold", fontsize="10", color="r")                           
+      plt.subplot(2,2,4)                                                                                             # Makes a bottom right subplot active in a 2x2 subplot layout
+      sns.distplot( ds.loc[ds.species=='setosa', "petal_width"] , color="dodgerblue", label="setosa")                # Plot setosa species petal width
+      sns.distplot( ds.loc[ds.species=='virginica', "petal_width"] , color="orange", label="virginica")              # Plot virginica species petal width
+      sns.distplot( ds.loc[ds.species=='versicolor', "petal_width"] , color="deeppink", label="versicolor")          # Plot versicolor species petal width
+      plt.xlabel("Petal Width", fontweight="bold", fontsize="12", color="b")                                         # Label of the x-axis
+      plt.ylabel('Frequency', fontweight="bold", fontsize="12", color="b")                                           # Label of the y-axis
+      plt.title('Iris Petal Width Histogram', fontweight="bold", fontsize="10", color="r")                           # Label title of distplot
 
+      plt.legend(bbox_to_anchor=(1,2), loc=2)                                                                       # Legend for the overall plot
+      plt.show()                                                                                                     # Display the distplot
 
-    plt.subplot(2,2,4)                                                                                              
-    sns.distplot( ds.loc[ds.species=='setosa', "petal_width"] , color="dodgerblue", label="setosa")               
-    sns.distplot( ds.loc[ds.species=='virginica', "petal_width"] , color="orange", label="virginica")              
-    sns.distplot( ds.loc[ds.species=='versicolor', "petal_width"] , color="deeppink", label="versicolor")          
-    plt.xlabel("Petal Width", fontweight="bold", fontsize="12", color="b")                                         
-    plt.ylabel('Frequency', fontweight="bold", fontsize="12", color="b")                                          
-    plt.title('Iris Petal Width Histogram', fontweight="bold", fontsize="10", color="r")                           
-    plt.legend(bbox_to_anchor=(1,2), loc=2)                                                                       
-    plt.show()                                                                                                    
+</p>
+</details> 
 
+ 
 ![Distplots by Attribute](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/dist.PNG)
 
 ### Scatterplots:
