@@ -3,8 +3,24 @@
 
 ### Table of Contents
 
-1. [ Introduction. ](#intro)
-2. [ Data Set. ](#data)
+1. [ Introduction ](#intro)
+2. [ Data Set ](#data)
+3. [ Discrepancies in the Iris Dataset ](#disc)
+4. [ Python Libraries ](#lib)
+5. [ Dataset Summary ](#sum)
+6. [ Dataset Summary](#sum)
+    * [Shape](#shape)
+    * [ Columns ](#columns)
+    * [ Info ](#info)
+    * [ Unique Species ](#unique)
+    * [ Null Values ](#isnull)
+    * [ Class Distribution ](#class)
+    * [ Head of each species ](#head)
+    * [ Tail of each species ](#tail)
+7. [Statistics of the Iris Dataset](#stat)
+    
+
+
 
 <a name="intro"></a>
 ### Introduction:
@@ -52,6 +68,8 @@ One flower species is linearly separable from the other two, but the other two a
  
  <img src="https://www.oreilly.com/library/view/python-artificial-intelligence/9781789539462/assets/462dc4fa-fd62-4539-8599-ac80a441382c.png" width="263" title="Attributes measured"> 
 
+
+<a name="disc"></a>
  ## Discrepancies in the Iris Data Set:
  
 |Sample Number  | Iris Feature  |     FisherOriginal Data  | Data used  |
@@ -60,7 +78,8 @@ One flower species is linearly separable from the other two, but the other two a
 |      38       |  sepal_width  |        3.6      |       3.1     |
 |      38       |  petal_length |        1.4      |       1.5     |
 
-
+  
+<a name="lib"></a>
 ## Python Libraries:
 
 <b> Anaconda on your device (version 3.7 +) </b>
@@ -93,8 +112,10 @@ This a satistical plotting library  which has more advanced data visualisation t
 
 https://www.codecademy.com/learn/data-visualization-python/modules/dspath-seaborn
 
+<a name="sum"></a>
 # Dataset Summary: 
 
+<a name="shape"></a>
 <b> A. Shape </b>
 
 Confirms the shape of the iris dataset in terms of the number of rows and columns. 
@@ -111,6 +132,7 @@ print("\n")
    
 ![Shape of Iris dataset](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/shape.PNG)
  
+ <a name="columns"></a>
  <b> B. Columns </b>
     
  The names of the columns of your dataset. 
@@ -128,6 +150,7 @@ print("\n")
     
 ![Column data type](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/columns.PNG)
 
+<a name="info"></a>
  <b> C. Info </b>
     
  Provides information on the iris dataset including names of columns, total number of rows and columns, data type of each column, range index and memory usage.
@@ -144,8 +167,8 @@ print("\n")
     
 ![Info of Iris dataset](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/info.PNG)
 
-
- <b> C. Unique </b>
+<a name="unique"></a>
+ <b> C. Unique Species</b>
  
  Check how many unique species of iris are in the dataset.
 
@@ -162,7 +185,8 @@ print("\n")
 
 ![Unique Species](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/uniques-species.PNG)
 
-<b> D. IsNull </b>
+<a name="isnull"></a>
+<b> D. Null Values </b>
 
 Determine if there is any null values in the dataset. This confirms there is no null values in the iris dataset. 
 
@@ -178,6 +202,7 @@ print("\n")
 
 ![Presence of null values](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/isnull.PNG)
 
+<a name="class"></a>
 <b> E. Class Distribution: </b>
 
 Class distribution - number of rows that belong to each species. This shows that data is distributed equally across the 3 species.
@@ -194,6 +219,7 @@ print("\n")
 
 ![Class Distribution](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/class.PNG)
 
+<a name="head"></a>
 <b> F. Head of each species: </b>
 
 Lists the top 4 rows for setosa species.
@@ -240,6 +266,7 @@ print("\n")
 
 ![virginica head](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/head-virginica.PNG)
 
+<a name="tail"></a>
 <b> G. Tail of each species: </b>
 
 Lists the last 4 rows for setosa species.
@@ -284,6 +311,7 @@ print("\n")
 
 ![virginica tail](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/tail-virginica.PNG)
 
+<a name="stat"></a>
 ## Statistics of the iris dataset:
 
 A. Summarise the data for iris overall dataset. This is a more efficient method than coding median, mean, min, max, standard deviation separately.
