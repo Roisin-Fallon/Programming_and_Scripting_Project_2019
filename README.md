@@ -43,7 +43,7 @@ The data set consists of:
     - Sepal length in cm 
 
 
-Image below depicts the difference between the petal and sepal.  Sepal is defined as the outermost structure of the flower, that  surround the more fragile parts of the flower .e.g. petals. Typically the petals can be  distinguished as being small and green  and the petals are colorful. However, this is not applicable to the iris flower species. Note in this image of the Iris Virginica  the sepals are larger than the petals  and are drooping, while the petals are upright.​
+Image below depicts the difference between the petal and sepal.  Sepal is defined as the outermost structure of the flower, that  surround the more fragile parts of the flower .e.g. petals. Typically the petals can be  distinguished as being small and green  and the petals are colorful. However, this is not applicable to the iris flower species. Note in this image of the Iris Virginica  the sepals are larger than the petals  and are drooping, while the petals are upright.
 
 Based on the combination of the four numeric features, the classification of the iris flower is made.  
 One flower species is linearly separable from the other two, but the other two are not linearly separable from each other.
@@ -286,33 +286,57 @@ print("\n")
 
 A. Summarise the data for iris overall dataset. This is a more efficient method than coding median, mean, min, max, standard deviation separately.
 
-    print("Summary statistics for iris entire dataset:")
-    print(ds.describe())
-    print("\n")                                                            
+<details><summary>Python Code</summary>
+<p>
+ 
+print("Summary statistics for iris entire dataset:")  
+print(ds.describe())                                          
+print("\n")
+ 
+</p>
+</details>                                                       
 
 ![describe entire iris dataset](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/describe-all.PNG)
 
 B. Summarise the data for iris setosa.
 
-    print("Summary statistics for iris setosa dataset:")
-    summary = print(setosa.describe())
-    print("\n")
+<details><summary>Python Code</summary>
+<p>
+ 
+print("Summary statistics for iris setosa dataset:")  
+print(setosa.describe())                                          
+print("\n")
+ 
+</p>
+</details>   
 
 ![describe setosa](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/describe-setosa.PNG)
 
 C. Summarise the data for iris versicolor.
 
-    print("Summary statistics for iris versicolor dataset:")                                         
-    print(versicolor.describe())
-    print("\n")
+<details><summary>Python Code</summary>
+<p>
+
+print("Summary statistics for iris versicolor dataset:")  
+print(versicolor.describe())                                          
+print("\n")
+
+</p>
+</details> 
 
 ![describe versicolor](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/describe-versicolor.PNG)
 
 D. Summarise the data for iris virginica.
 
-    print("Summary statistics for iris virginica dataset:")                                          
-    print(virginica.describe())
-    print("\n")
+<details><summary>Python Code</summary>
+<p>
+
+print("Summary statistics for iris virginica dataset:")  
+print(virginica.describe())                                         
+print("\n")
+
+</p>
+</details> 
 
 ![describe virginica](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/describe-virginica.PNG)
  
@@ -348,13 +372,23 @@ D. Summarise the data for iris virginica.
 <i> Boxplots are best when used in combination with another statistical graph method e.g. histogram to give a  more thorough analysis of the iris dataset. </i>
 </p>
 
-         plt.figure(figsize=(12,10))                                                            
-         sns.boxplot(data=ds)                                                                   
-         # Format of boxplot 
-         plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")          
-         plt.ylabel("centimeters", fontweight="bold", fontsize="12", color="b")                
-         plt.show()                                                                                                             
+<details><summary>Python Code</summary>
+<p>
 
+*Boxplot of the total iris dataset not specified for species
+
+plt.figure(figsize=(12,10))                                                        # Resize the boxplot
+sns.boxplot(data=ds)                                                               # Load iris datset via seaborne 
+
+*Format of boxplot 
+
+plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")      # Title of graph
+plt.ylabel("centimeters", fontweight="bold", fontsize="12", color="b")             # Label of the y-axis
+plt.show()                                                                         # Display the boxplot 
+
+</p>
+</details> 
+                                                                                                        
 ![Boxplot](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot.PNG)
 
         plt.figure(figsize=(14,10))                                                                               
