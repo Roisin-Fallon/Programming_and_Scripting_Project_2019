@@ -123,9 +123,9 @@ Confirms the shape of the iris dataset in terms of the number of rows and column
 <details><summary>Python Code</summary>
 <p>
  
-print("Number of rows and columns:")  
-print(ds.shape)                                                       
-print("\n")
+      print("Number of rows and columns:")  
+      print(ds.shape)                                                       
+      print("\n")
  
 </p>
 </details>
@@ -140,9 +140,9 @@ print("\n")
 <details><summary>Python Code</summary>
 <p>
  
-print("Name of each column in the iris dataset:")  
-print(ds.columns)                                                       
-print("\n")
+      print("Name of each column in the iris dataset:")  
+      print(ds.columns)                                                       
+      print("\n")
  
 </p>
 </details>
@@ -158,9 +158,9 @@ print("\n")
 <details><summary>Python Code</summary>
 <p>
  
-print("Information about iris dataset:")  
-print(ds.info())                                               
-print("\n")
+      print("Information about iris dataset:")  
+      print(ds.info())                                               
+      print("\n")
  
 </p>
 </details>
@@ -174,10 +174,10 @@ print("\n")
 
 <details><summary>Python Code</summary>
 <p>
- 
-print("Unique species:")  
-print(ds['species'].unique())                                                
-print("\n")
+
+      print("Unique species:")  
+      print(ds['species'].unique())                                                
+      print("\n")
  
 </p>
 </details>
@@ -192,10 +192,10 @@ Determine if there is any null values in the dataset. This confirms there is no 
 
 <details><summary>Python Code</summary>
 <p>
- 
-print("Null values present:")  
-print(ds.isnull().any())                                             
-print("\n")
+
+      print("Null values present:")  
+      print(ds.isnull().any())                                             
+      print("\n")
  
 </p>
 </details>
@@ -210,9 +210,9 @@ Class distribution - number of rows that belong to each species. This shows that
 <details><summary>Python Code</summary>
 <p>
  
-print("Class Distribution:")  
-print(ds.groupby('species').size())                                             
-print("\n")
+      print("Class Distribution:")  
+      print(ds.groupby('species').size())                                             
+      print("\n")
  
 </p>
 </details>
@@ -227,9 +227,9 @@ Lists the top 4 rows for setosa species.
 <details><summary>Python Code</summary>
 <p>
 
-print("First 4 setosa values:")  
-print(setosa.head(4))                                                  
-print("\n")
+      print("First 4 setosa values:")  
+      print(setosa.head(4))                                                  
+      print("\n")
  
 </p>
 </details>
@@ -242,9 +242,9 @@ Lists the top 4 rows for versicolor species.
 <details><summary>Python Code</summary>
 <p>
 
-print("First 4 versicolor values:")  
-print(versicolor.head(4))                                                  
-print("\n")
+      print("First 4 versicolor values:")  
+      print(versicolor.head(4))                                                  
+      print("\n")
 
 </p>
 </details>
@@ -257,9 +257,9 @@ Lists the top 4 rows for virginica species.
 <details><summary>Python Code</summary>
 <p>
  
-print("First 4 virginica values:")  
-print(virginica.head(4))                                                  
-print("\n")
+      print("First 4 virginica values:")  
+      print(virginica.head(4))                                                  
+      print("\n")
  
 </p>
 </details>
@@ -273,10 +273,10 @@ Lists the last 4 rows for setosa species.
 
 <details><summary>Python Code</summary>
 <p>
- 
-print("Last 4 setosa values:")  
-print(setosa.tail(4))                                                  
-print("\n")
+
+      print("Last 4 setosa values:")  
+      print(setosa.tail(4))                                                  
+      print("\n")
  
 </p>
 </details>
@@ -288,9 +288,9 @@ Lists the last 4 rows for versicolor species.
 <details><summary>Python Code</summary>
 <p>
  
-print("Last 4 versicolor values:")  
-print(versicolor.tail(4))                                                  
-print("\n")
+      print("Last 4 versicolor values:")  
+      print(versicolor.tail(4))                                                  
+      print("\n")
  
 </p>
 </details>
@@ -302,9 +302,9 @@ Lists the last 4 rows for virginica species.
 <details><summary>Python Code</summary>
 <p>
  
-print("Last 4 virginica values:")  
-print(virginica.tail(4))                                                   
-print("\n")
+      print("Last 4 virginica values:")  
+      print(virginica.tail(4))                                                   
+      print("\n")
  
 </p>
 </details>
@@ -319,9 +319,9 @@ A. Summarise the data for iris overall dataset. This is a more efficient method 
 <details><summary>Python Code</summary>
 <p>
  
-print("Summary statistics for iris entire dataset:")  
-print(ds.describe())                                          
-print("\n")
+      print("Summary statistics for iris entire dataset:")  
+      print(ds.describe())                                          
+      print("\n")
  
 </p>
 </details>                                                       
@@ -333,10 +333,10 @@ B. Summarise the data for iris setosa.
 <details><summary>Python Code</summary>
 <p>
  
-print("Summary statistics for iris setosa dataset:")  
-print(setosa.describe())                                          
-print("\n")
- 
+      print("Summary statistics for iris setosa dataset:")  
+      print(setosa.describe())                                          
+      print("\n")
+
 </p>
 </details>   
 
@@ -347,9 +347,9 @@ C. Summarise the data for iris versicolor.
 <details><summary>Python Code</summary>
 <p>
 
-print("Summary statistics for iris versicolor dataset:")  
-print(versicolor.describe())                                          
-print("\n")
+      print("Summary statistics for iris versicolor dataset:")  
+      print(versicolor.describe())                                          
+      print("\n")
 
 </p>
 </details> 
@@ -361,9 +361,9 @@ D. Summarise the data for iris virginica.
 <details><summary>Python Code</summary>
 <p>
 
-print("Summary statistics for iris virginica dataset:")  
-print(virginica.describe())                                         
-print("\n")
+      print("Summary statistics for iris virginica dataset:")  
+      print(virginica.describe())                                         
+      print("\n")
 
 </p>
 </details> 
@@ -404,36 +404,44 @@ print("\n")
 
 <details><summary>Python Code</summary>
 <p>
-
-*Boxplot of the total iris dataset not specified for species
-
-plt.figure(figsize=(12,10))                                                        # Resize the boxplot
-sns.boxplot(data=ds)                                                               # Load iris datset via seaborne 
-
-*Format of boxplot 
-
-plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")      # Title of graph
-plt.ylabel("centimeters", fontweight="bold", fontsize="12", color="b")             # Label of the y-axis
-plt.show()                                                                         # Display the boxplot 
+   
+      # Boxplot of the total iris dataset not specified for species
+      plt.figure(figsize=(12,10))                                                                        # Resize the boxplot
+      sns.boxplot(data=ds)                                                                               # Load iris datset via seaborne 
+      # Format of boxplot 
+      plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")                      # Title of graph
+      plt.ylabel("centimeters", fontweight="bold", fontsize="12", color="b")                             # Label of the y-axis
+      plt.show()   
 
 </p>
 </details> 
-                                                                                                        
+                                                                                        
 ![Boxplot](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot.PNG)
 
-        plt.figure(figsize=(14,10))                                                                               
-        ds_long = pd.melt(ds, id_vars='species')                                               
-        sns.boxplot(x='species', y='value', hue='variable', data=ds_long)                      
 
-        plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")          
-        plt.ylabel("centimeters", fontweight="bold", fontsize="12", color="b")                 
-        plt.xlabel("Species", fontweight="bold", fontsize="12", color="b")                     
-        plt.legend(bbox_to_anchor=(1, 1), loc=2)                                               
-        plt.margins(0)                                                                        
-        for i in range(len(ds['species'].unique())-1):                                        
-            plt.vlines(i+.5, 0, 8)                                                                                
+<details><summary>Python Code</summary>
+<p>
+   
+      # Boxplot to represent each of the 3 species and each of the three 
+      # Adapted from https://stackoverflow.com/a/40242457
 
-        plt.show()     
+      plt.figure(figsize=(14,10))                                                             # Resize the boxplot
+      ds_long = pd.melt(ds, id_vars='species')                                                # melt allows the graphs to appear together 
+      sns.boxplot(x='species', y='value', hue='variable', data=ds_long)                       # ds_long refers to the format appearing as long rather than wide
+
+      plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")           # Title of graph
+      plt.ylabel("centimeters", fontweight="bold", fontsize="12", color="b")                  # Label of the y-axis
+      plt.xlabel("Species", fontweight="bold", fontsize="12", color="b")                      # Label of the x-axis
+      plt.legend(bbox_to_anchor=(1, 1), loc=2)                                                # Legend of the data 
+      plt.margins(0)                                                                          # Margin to start at zero 
+      for i in range(len(ds['species'].unique())-1):                                          # Creates a division between the 3 species
+          plt.vlines(i+.5, 0, 8)                                                                                
+
+      plt.show()                                                                              # Display the boxplot
+
+        
+</p>
+</details> 
 
 ![Boxplot by Species](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/boxplot2.PNG)
 
