@@ -119,10 +119,17 @@ Cofirms the shape of the iris dataset in terms of the number of rows and columns
  <b> C. Unique </b>
  
  Check how many unique species of iris are in the dataset.
+
+<details><summary>Python Code</summary>
+<p>
+ 
+print("Unique species:")  
+print(ds['species'].unique())                                                
+print("\n")
+ 
+</p>
+</details>
     
-    print("Unique species:")  
-    print(ds['species'].unique())                                                
-    print("\n")
 
 ![Unique Species](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/uniques-species.PNG)
 
