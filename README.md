@@ -31,17 +31,16 @@ The data set consists of:
 - Data distribution: 50 entries for each class
 - There is no missing data
 - Iris dataset is classified into 5 variables
-- Flower species- Categorical data can be divided into 3 classes
-  - Iris setosa
-  - Iris virginica 
-  - Iris versicolor
 
-
-- 4 numeric features measure in cm
-  - Petal width in cm 
-  - Petal length in cm 
-  - Sepal width in cm 
-  - Sepal length in cm 
+  - Flower species- Categorical data can be divided into 3 classes
+    - Iris setosa
+    - Iris virginica 
+    - Iris versicolor
+  - 4 numeric features measure in cm
+    - Petal width in cm 
+    - Petal length in cm 
+    - Sepal width in cm 
+    - Sepal length in cm 
 
 
 Image below depicts the difference between the petal and sepal.  Sepal is defined as the outermost structure of the flower, that  surround the more fragile parts of the flower .e.g. petals. Typically the petals can be  distinguished as being small and green  and the petals are colorful. However, this is not applicable to the iris flower species. Note in this image of the Iris Virginica  the sepals are larger than the petals  and are drooping, while the petals are upright.​
@@ -50,6 +49,15 @@ Based on the combination of the four numeric features, the classification of the
 One flower species is linearly separable from the other two, but the other two are not linearly separable from each other.
  
  <img src="https://www.oreilly.com/library/view/python-artificial-intelligence/9781789539462/assets/462dc4fa-fd62-4539-8599-ac80a441382c.png" width="263" title="Attributes measured"> 
+
+ ## Discrepancies in the Iris Data Set:
+ 
+|Sample Number  | Iris Feature  |     FisherOriginal Data  | Data used  |
+| ------------- | ------------- |  -------------  | ------------- |
+|      35     	 |  petal_width  |        0.2      |       0.1     |
+|      38       |  sepal_width  |        3.6      |       3.1     |
+|      38       |  petal_length |        1.4      |       1.5     |
+
 
 ## Python Libraries:
 
@@ -87,21 +95,34 @@ https://www.codecademy.com/learn/data-visualization-python/modules/dspath-seabor
 
 <b> A. Shape </b>
 
-Cofirms the shape of the iris dataset in terms of the number of rows and columns. 
+Confirms the shape of the iris dataset in terms of the number of rows and columns. 
 
-    print("Number of rows and columns:")  
-    print(ds.shape)                                                       
-    print("\n")
-    
-   ![Shape of Iris dataset](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/shape.PNG)
+<details><summary>Python Code</summary>
+<p>
+ 
+print("Number of rows and columns:")  
+print(ds.shape)                                                       
+print("\n")
+ 
+</p>
+</details>
+   
+![Shape of Iris dataset](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/shape.PNG)
  
  <b> B. Columns </b>
     
  The names of the columns of your dataset. 
-    
-    print("Name of each column in the iris dataset:")  
-    print(ds.columns)                                                       
-    print("\n")
+
+<details><summary>Python Code</summary>
+<p>
+ 
+print("Name of each column in the iris dataset:")  
+print(ds.columns)                                                       
+print("\n")
+ 
+</p>
+</details>
+
     
 ![Column data type](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/columns.PNG)
 
@@ -109,9 +130,15 @@ Cofirms the shape of the iris dataset in terms of the number of rows and columns
     
  Provides information on the iris dataset including names of columns, total number of rows and columns, data type of each column, range index and memory usage.
  
-    print("Information about iris dataset:") 
-    print(ds.info())
-    print("\n")
+<details><summary>Python Code</summary>
+<p>
+ 
+print("Information about iris dataset:")  
+print(ds.info())                                               
+print("\n")
+ 
+</p>
+</details>
     
 ![Info of Iris dataset](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/info.PNG)
 
@@ -137,19 +164,31 @@ print("\n")
 
 Determine if there is any null values in the dataset. This confirms there is no null values in the iris dataset. 
 
-    print("Null values present:")
-    print(ds.isnull().any())
-    print("\n")
+<details><summary>Python Code</summary>
+<p>
+ 
+print("Null values present:")  
+print(ds.isnull().any())                                             
+print("\n")
+ 
+</p>
+</details>
 
 ![Presence of null values](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/isnull.PNG)
 
 <b> E. Class Distribution: </b>
 
 Class distribution - number of rows that belong to each species. This shows that data is distributed equally across the 3 species.
-    
-    print("Class Distribution:")  
-    print(ds.groupby('species').size())                                             
-    print("\n")
+
+<details><summary>Python Code</summary>
+<p>
+ 
+print("Class Distribution:")  
+print(ds.groupby('species').size())                                             
+print("\n")
+ 
+</p>
+</details>
 
 ![Class Distribution](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/class.PNG)
 
@@ -157,25 +196,45 @@ Class distribution - number of rows that belong to each species. This shows that
 
 Lists the top 4 rows for setosa species.
 
-    print("First 4 setosa values:") 
-    print(setosa.head(4))
-    print("\n")
-    
+<details><summary>Python Code</summary>
+<p>
+
+print("First 4 setosa values:")  
+print(setosa.head(4))                                                  
+print("\n")
+ 
+</p>
+</details>
+
+
 ![setosa head](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/head-setosa.PNG)
 
 Lists the top 4 rows for versicolor species.
 
-    print("First 4 versicolor values:") 
-    print(versicolor.head(4))
-    print("\n")
+<details><summary>Python Code</summary>
+<p>
+
+print("First 4 versicolor values:")  
+print(versicolor.head(4))                                                  
+print("\n")
+
+</p>
+</details>
+
 
 ![versicolor head](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/head-versicolor.PNG)
 
 Lists the top 4 rows for virginica species.
 
-    print("First 4 virginica values:") 
-    print(virginica.head(4))
-    print("\n")
+<details><summary>Python Code</summary>
+<p>
+ 
+print("First 4 virginica values:")  
+print(virginica.head(4))                                                  
+print("\n")
+ 
+</p>
+</details>
 
 ![virginica head](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/head-virginica.PNG)
 
@@ -183,25 +242,43 @@ Lists the top 4 rows for virginica species.
 
 Lists the last 4 rows for setosa species.
 
-    print("Last 4 setosa values:")  
-    print(setosa.tail(4))
-    print("\n")
+<details><summary>Python Code</summary>
+<p>
+ 
+print("Last 4 setosa values:")  
+print(setosa.tail(4))                                                  
+print("\n")
+ 
+</p>
+</details>
 
 ![setosa tail](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/tail-setosa.PNG)
 
 Lists the last 4 rows for versicolor species.
 
-    print("Last 4 versicolor values:")  
-    print(versicolor.tail(4))
-    print("\n")
+<details><summary>Python Code</summary>
+<p>
+ 
+print("Last 4 versicolor values:")  
+print(versicolor.tail(4))                                                  
+print("\n")
+ 
+</p>
+</details>
 
 ![versicolor tail](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/tail-versicolor.PNG)
 
 Lists the last 4 rows for virginica species.
 
-    print("Last 4 virginica values:")  
-    print(virginica.tail(4))
-    print("\n")
+<details><summary>Python Code</summary>
+<p>
+ 
+print("Last 4 virginica values:")  
+print(virginica.tail(4))                                                   
+print("\n")
+ 
+</p>
+</details>
 
 ![virginica tail](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/tail-virginica.PNG)
 
