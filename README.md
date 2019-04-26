@@ -2,10 +2,11 @@
 
 
 ### Table of Contents
-- Libaries 
-- Introduction 
 
+1. [ Introduction. ](#intro)
+2. [ Data Set. ](#data)
 
+<a name="intro"></a>
 ### Introduction:
 
  <img src="http://people.wku.edu/charles.smith/chronob/ANDERSON.jpg" width="300" title="Edgar Anderson" > <img src="http://www.genetics.org/content/genetics/154/4/1419/F1.medium.gif " width="263" title="Ronald Fisher"> 
@@ -17,7 +18,8 @@ The iris dataset originated from research carried out by Edgar Anderson (America
 <p>
 Ronald Fisher adapted Anderson data to determine if linear regression could be used/applied . In 1936 Fisher published a paper “maximize the ratio of the difference between the specific means to the standard deviation within species”.  [2;1]  It is important to understand that Fisher focused on the linear discrimination analysis. The Iris flower data set or Fisher’s Iris data set is a multivariate data set introduced by Sir Ronald Fisher (1936) as an example of discriminant analysis.[1]
   </p> 
- 
+  
+ <a name="data"></a>
  ## Data Set:
  
  <img src="https://sudaniscience.files.wordpress.com/2018/10/9.png?w=720 " width="800" title="Iris flower species"> 
