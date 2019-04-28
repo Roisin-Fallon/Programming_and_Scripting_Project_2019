@@ -111,9 +111,13 @@ This is a plotting library, makes  2D plots  that helps in the visualisation of 
 
 <b> Seaborn </b>
 
-This a satistical plotting library  which has more advanced data visualisation than matplotlib (both are plotting libraries). Seaborn produces nice visualizations eliminating much of the work necessary for producing similar visualizations with matplotlib. It gives a high-level interface to draw statistical graphs, making it easier to generate more complex visualizations. Brief introduction outlined <a href=https://towardsdatascience.com/data-visualization-using-seaborn-fc24db95a850; > here. </a>
+This a satistical plotting library  which has more advanced data visualisation than matplotlib (both are plotting libraries). Seaborn produces nice visualizations eliminating much of the work necessary for producing similar visualizations with matplotlib. It gives a high-level interface to draw statistical graphs, making it easier to generate more complex visualizations. Brief introduction outlined <a href=https://towardsdatascience.com/data-visualization-using-seaborn-fc24db95a850> here. </a>
 
-https://www.codecademy.com/learn/data-visualization-python/modules/dspath-seaborn
+<b> Scikit-learn </b>
+
+Simple and efficient tool that can be used for data miming or data analysis. It's library contains a lot of effiecient tools for machine learning and statistical modeling including classification, regression, clustering and dimensionality reduction. It comes as part of the anaconda package Brief introduction outlined <https://scikit-learn.org/stable/install.html > here. </a>
+
+
 
 
 <a name="imp"></a>
@@ -563,7 +567,7 @@ D. Summarise the data for iris virginica.
 
 <p> Histograms are a graphical representation of the distribution of the data set. A histogram displays the single quantitative variable along the x axis and frequency of that variable on the y axis. Frequency is represented by the area of each rectangle. Each of the species are included on the same plot which is done by overlayng the histograms by setting the transparency to 0.5 it allows us to see what is behind each of the 3 plots. 
 </p>
-<p> The distinguishing feature of a histogram is that data is grouped into "bins", which are intervals on the x-axis.  Bin involves dividing the iris dataset values into a series of intervals and then count the number of values that fall into each interval [5]. By default bin size is set to 10. It is important to pick a bin size that is suitable for your data set, the goal is to have a bin number where we can see the finer information (more bins) while not losing the bigger picture (less bins) [6].
+<p> The distinguishing feature of a histogram is that data is grouped into "bins", which are intervals on the x-axis.  Bin involves dividing the iris dataset values into a series of intervals and then count the number of values that fall into each interval [5]. By default bin size is set to 10. It is important to pick a bin size that is suitable for your data set, the goal is to have a bin number where we can see the finer information (more bins) while not losing the bigger picture (less bins) [6]. In creating this figure I decided to use the for loop as it built on knowledge gained using for loops in the Programming and Scripting module, this required the use of sklearn. 
 
 </p>
  
@@ -571,8 +575,8 @@ D. Summarise the data for iris virginica.
             
 <p>
    
-import matplotlib.pyplot as plt
-from sklearn import datasets
+      import matplotlib.pyplot as plt
+      from sklearn import datasets
 
       ds= datasets.load_iris()                                                                                                                      # Load the iris data set   
 
@@ -594,7 +598,9 @@ from sklearn import datasets
 
 <a name="dist"></a>
 ## Distplot:
- 
+
+Displot combines the function of a histogram and the KDE (densities)plot into the same plot using the seaborn package. 
+
 <details><summary>Python Code</summary>
    
       f, axes = plt.subplots(2, 2, figsize=(12, 10), dpi=100)                                                         # Figsize and dpi(dot-per-inch)
@@ -684,6 +690,8 @@ Note I have decided to code one of the pairplots using sns.pairplot function whi
 <a name="scatter"></a>
 ### Scatterplot:
 
+Scatter plots  is a 2D visualation of the iris dataset. Its shows the bivariate relationship between 2 variables  but does not indicate the strength of the relationship between them. Each member of the dataset gets plotted as a point whose (x, y)  coordinates relates to its values for the two variables [13]. Scatter plot shows the relationship between two variable but does not indicates the strength of relationship amongst them.
+
 Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/scatterplot.py
 
 <details><summary>Python Code</summary>
@@ -704,6 +712,7 @@ Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Proj
  
  <details><summary>Python Code</summary>
 <p>      
+   
       # Scatterplot for sepal comparasion for each species 
 
       sns.scatterplot(x="sepal_length", y="sepal_width", hue="species",style=ds.species, data=ds)                     # Plot sepal length and width for each species 
@@ -722,9 +731,10 @@ Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Proj
 
 <a name="con"></a>
 ## Conclusion:
-By completing this project based on the iris data set, it has combined the knowledge that I have gained through the Programming and Scripting module provided by GMIT while allowing me to research further ways to represent a data set. This project confirms the idea that Iris Setosa is easier to distinguish from the 3 species. 
 
-### Main findings:
+By completing this project based on the iris data set, it has combined the knowledge that I have gained through the Programming and Scripting module provided by GMIT while allowing me to research further ways to represent a data set. This project confirms the idea that Iris Setosa is easier to distinguish from the 3 species. This project demonstrates how t effictively visualise a dataset using python by using a combination of plots outlined above. A good understanding of your dataset with repects its deminisions is essential prior to visualising the dataset. 
+
+### Findings:
 
 Statistics of the iris dataset is a great way to become familiar with the dataset. It gives us a numerical representation of the datatset. 
 
@@ -740,26 +750,21 @@ The petal length of virginica allows a better discrimination to versicolor than 
 
 ### Histograms and Distplots:
 
-
-Due to Petal length anf width are skewed to the left, I would be caution using its mean. The Setosa Petal length and width are concentrated on the far left from the rest of the Species which is very interesting!
-
-For each of the features of the iris data set I have included each species on the same plot.  We can see that in some distribution plots the species do not overlap e.g. Petal Length where as with other features they are more difficult to distinguish e.g. Sepal Width. From the graphs we can see that two of the variables seem to indicate a bell shaped curve or Normal distribution. 
-
-Petal length - Iris setosa can be seperated with no visible overlap with the other iris species. Iris setosa can be distinguished as a petal length of less than or equal to 2.  it is not as easy to distinguish the petal length for versicolor and virginica.
+Petal length - Iris setosa can be seperated with no visible overlap with the other iris species. Iris setosa can be distinguished as a petal length of <= to 2. A petal length of >2 and <4.7 can there is a hogher chance that it is versicolor and the remianing virginica. However, it is not as easy to distinguish the petal length for versicolor and virginica as they overlap. 
 
 Petal width- Iris setosa can be again be seperated from the other 2 species. The other species are overlapped once again so cannot be clearly distinguished. The better of the two so far is petal length as the distribution is further in the petal length.
 
 Sepal length – there is no clear seperation in the species as they overlap each other. Hence sepal length is not the best variable to separate the species in distplot. 
+Petal length < 2 can be classified as setosa species 
 
 Sepal width – similar to sepal length speration of the iris species is near impossible,. In fact  virginica and versicolor are almost fully overlapped.
+
 
 ### Scatter plots:
 Petal length and width have a linear relationship which is evident as they increase proportionally. Sepal length and width do not have a linear relationship. From the scatter plots it can clearly be seen that Iris setosa occupy the higher values for sepal length while Iris Virginica occupy the highest values for sepal width.  Iris versicolour remian in the middle values for the both sepal length and the sepal width.
 
 Iris setosa can be easily distinguished from the other species. There is some overlap between virginica and versicolor which confirms Fisher findings. 
-
-The above findings confirm that Iris Setosa is linearly seperable from the other species. 
-In addition petal length of virginica allows a better discrimination to versicolor than the sepal length.
+ 
 
 <a name="bib"></a>
  ## Bibliography:
@@ -785,4 +790,6 @@ In addition petal length of virginica allows a better discrimination to versicol
 
 11. Anderson, Edgar. 1935. “The Irises of the Gaspe Peninsula.” Bulletin of the American Iris Society 59: 2–5.
 
-12. Suruchi Fialoke. 2019. Classification of Iris Varieties. [ONLINE] Available at: http://suruchifialoke.com/2016-10-13-machine-learning-tutorial-iris-classification/. 
+12. Suruchi Fialoke. 2019. Classification of Iris Varieties. [ONLINE] Available at: http://suruchifialoke.com/2016-10-13-machine-learning-tutorial-iris-classification/.
+
+13. Khan Academy. 2019. Scatterplots and correlation review (article) | Khan Academy. [ONLINE] Available at: https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/introduction-to-scatterplots/a/scatterplots-and-correlation-review.
