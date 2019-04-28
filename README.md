@@ -129,7 +129,7 @@ The iris dataset used in this project had headings added prior to its download. 
 <details><summary>Read the iris.csv</summary>
 <p>
          
-         ds = pd.read_csv("iris.csv", delimiter=",")                                                       # Read in the CSV as dataframe
+         ds = pd.read_csv("iris.csv", delimiter=",")                                     # Read in the CSV as dataframe
  
 </p>
 </details>
