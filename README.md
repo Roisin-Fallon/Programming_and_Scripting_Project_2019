@@ -22,7 +22,7 @@
 9. [Visualize the dataset](#visualize)
     * [Boxplot](#box)
     * [ Histograms ](#hist)
-    * [ Histograms ](#dist)
+    * [Distplot ](#dist)
     * [ Scatterplot ](#scatter)
     * [ Pairplot ](#pair)
 10. [Conclusion](#con)
