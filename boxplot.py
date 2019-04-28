@@ -8,7 +8,7 @@ import seaborn as sns                                                           
 ds = pd.read_csv("iris.csv", delimiter=",")                                                                 # Read in the CSV as dataframe
 
 # Boxplot of the total iris dataset not specified for species
-plt.figure(figsize=(12,10))                                                                                 # Resize the boxplot
+plt.figure(figsize=(10,7))                                                                                  # Resize the boxplot
 sns.boxplot(data=ds)                                                                                        # Load iris datset via seaborne 
 # Format of boxplot 
 plt.title("Fisher Iris Species", fontweight="bold", fontsize="16", color="r")                               # Title of graph
