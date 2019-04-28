@@ -531,8 +531,11 @@ from sklearn import datasets
       plt.show()                                                                                                                                    # Display the boxplot
 </p>
 </details> 
-  ![Distplots by Attribute](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/histogram.PNG)
- ## Distplot:
+
+  ![Histogram by Attribute](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/histogram.PNG)
+
+<a name="dist"></a>
+## Distplot:
  
 <details><summary>Python Code</summary>
    
@@ -582,11 +585,13 @@ from sklearn import datasets
 ![Distplots by Attribute](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/dist.PNG)
 
 <a name="scatter"></a>
+
 ### Scatterplots:
 
 Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/scatterplot.py
 
- 
+<details><summary>Python Code</summary>
+<p> 
     
     # Scatterplot for petal comparasion for each species 
 
@@ -595,8 +600,13 @@ Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Proj
       plt.ylabel("Petal Width (cm)", fontweight="bold", fontsize="12", color="b")                                     # Format of the y-axis
       plt.title("Petal Comparasion for each species", fontweight="bold", fontsize="12", color="r")                    # Title of graph
       plt.show()                                                                                                      # Display the scatterplot
+</p>
+</details> 
 
 ![Scatterplots](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/scatterplot.PNG)
+ 
+ <details><summary>Python Code</summary>
+<p>      
       # Scatterplot for sepal comparasion for each species 
 
       sns.scatterplot(x="sepal_length", y="sepal_width", hue="species",style=ds.species, data=ds)                     # Plot sepal length and width for each species 
@@ -605,10 +615,15 @@ Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Proj
       plt.title("Sepal Comparasion for each iris species", fontweight="bold", fontsize="12", color="r")               # Title of graph
 
       plt.show()    
-      
-       
+</p>
+</details> 
 
-![Scatterplots](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/scatterplot.PNG)
+![Scatterplots](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/scatterplot2.PNG)
+
+<a name="con"></a>
+## Conclusion
+
+<a name="bib"></a>
  ## Bibliography:
 1. Kozak, Marcin & Łotocka, Barbara. (2013). What should we know about the famous Iris data?. Current science. 104. 579-580.
 
