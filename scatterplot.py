@@ -17,7 +17,8 @@ sns.scatterplot(x="petal_length", y="petal_width", hue="species",style= ds.speci
 plt.xlabel("Petal Length (cm)", fontweight="bold", fontsize="12", color="b")                                    # Format of the x-axis
 plt.ylabel("Petal Width (cm)", fontweight="bold", fontsize="12", color="b")                                     # Format of the y-axis
 plt.title("Petal Comparasion for each species", fontweight="bold", fontsize="12", color="r")                    # Title of graph
-plt.show()
+plt.show()                                                                                                      # Display the scatterplot
+
 
 # Scatterplot for sepal comparasion for each species 
 
