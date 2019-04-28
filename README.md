@@ -32,7 +32,7 @@
 
 
 <a name="intro"></a>
-### Introduction:
+## Introduction:
 
 <p align="center">
    <img src="http://people.wku.edu/charles.smith/chronob/ANDERSON.jpg" width="300" title="Edgar Anderson" > <img src="http://www.genetics.org/content/genetics/154/4/1419/F1.medium.gif " width="263" title="Ronald Fisher"> 
@@ -83,6 +83,7 @@ One flower species is linearly separable from the other two, but the other two a
 </p>
 
 
+<a name="lib"></a>
 ## Python Libraries:
 
 <b> Anaconda on your device (version 3.7 +) </b>
@@ -150,7 +151,7 @@ Steve Chadwick identified a number of discrepancies between the dataset used in 
 <a name="lib"></a>
 
 <a name="sum"></a>
-# Dataset Summary: 
+## Dataset Summary: 
 
 <a name="shape"></a>
 <b> A. Shape </b>
@@ -440,7 +441,7 @@ D. Summarise the data for iris virginica.
 
 
 <a name="visualize"></a>
-### Visualize the dataset:
+## Visualize the dataset:
 
 <a name="box"></a>
 ### Boxplots:
