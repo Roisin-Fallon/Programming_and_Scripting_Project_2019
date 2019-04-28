@@ -10,18 +10,18 @@ warnings.filterwarnings("ignore")
 
 ds = pd.read_csv("iris.csv", delimiter=",")
 
-plt.figure(figsize=(12,10))                                                                                     # Figure size 
 
 # Scatterplot for petal comparasion for each species 
-plt.subplot(2,2,1)                                                                                              # Makes a top right subplot
-ax = sns.scatterplot(x="petal_length", y="petal_width", hue="species",style= ds.species, data=ds)               # Plot petal length and width for each species 
+
+sns.scatterplot(x="petal_length", y="petal_width", hue="species",style= ds.species, data=ds)                    # Plot petal length and width for each species 
 plt.xlabel("Petal Length (cm)", fontweight="bold", fontsize="12", color="b")                                    # Format of the x-axis
 plt.ylabel("Petal Width (cm)", fontweight="bold", fontsize="12", color="b")                                     # Format of the y-axis
 plt.title("Petal Comparasion for each species", fontweight="bold", fontsize="12", color="r")                    # Title of graph
+plt.show()
 
 # Scatterplot for sepal comparasion for each species 
-plt.subplot(2,2,2)                                                                                              # Makes a top right subplot
-ax = sns.scatterplot(x="sepal_length", y="sepal_width", hue="species",style=ds.species, data=ds)                # Plot sepal length and width for each species 
+
+sns.scatterplot(x="sepal_length", y="sepal_width", hue="species",style=ds.species, data=ds)                     # Plot sepal length and width for each species 
 plt.xlabel("Sepal Length (cm)", fontweight="bold", fontsize="12", color="b")                                    # Format of the x-axis
 plt.ylabel("Sepal Width (cm)", fontweight="bold", fontsize="12", color="b")                                     # Format of the y-axis
 plt.title("Sepal Comparasion for each iris species", fontweight="bold", fontsize="12", color="r")               # Title of graph
