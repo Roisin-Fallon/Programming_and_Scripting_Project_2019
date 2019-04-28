@@ -426,7 +426,7 @@ D. Summarise the data for iris virginica.
    
       # Boxplot of the total iris dataset not specified for species
       
-      plt.figure(figsize=(12,10))                                                                        # Resize the boxplot
+      plt.figure(figsize=(10,7))                                                                        # Resize the boxplot
       sns.boxplot(data=ds)                                                                               # Load iris datset via seaborne 
       
       # Format of boxplot 
@@ -599,8 +599,39 @@ from sklearn import datasets
 <p>
  A pairplot  can be divided into 2 parts:
 
-Below the diagonal axis represents histogram (Image 1) or distplot (Image 2) corresponding to the feature of that row . The histogram as stated above shows the univariate  distribution of the data. While thes scatterplot demonstrate the bivariate relationship between multiple pairwise features in the Iris data set. [7; 8]
+Below the diagonal axis represents histogram (Image 1) or distplot (Image 2) corresponding to the feature of that row . The histogram as stated above shows the univariate  distribution of the data. While thes scatterplot demonstrate the bivariate relationship between multiple pairwise features in the Iris data set [7; 8]. 
 
+Note I have decided to code one of the pairplots using sns.pairplot function while in the second I use sns.PairGrid which demonstrates pairplots can be coded in more than one way using seaborn. The sns.PairGrid is a class and hence requires plots to be filled in manually which explains why there are more lines required to plot essentially the same figure [10].
+
+ <details><summary>Python Code</summary>
+<p> 
+            
+      # Pairplot using distplot and scatterplot   
+      sns.pairplot(ds, hue="species",  kind = "reg", markers=[".", "d", "+"],  height=2.3, aspect=1.9)                                # Each species is seperated by color and marker 
+      plt.suptitle("Fisher Iris Pairplot using displot and scatterplot", fontweight="bold", fontsize="12", color="g" )                # Overall heading for the graph                                                                              
+      plt.subplots_adjust(top=.9)                                                                                                     # Leave space so it does not cover the figure
+      plt.show()                                                                                                                      # Display the pairplot 
+      </p>
+</details>
+
+![Pairplot using sns.pairplot](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/pairplot.PNG)
+
+ <details><summary>Python Code</summary>
+<p> 
+   
+      # PairGrid with histogram and scatterplot
+
+      g = sns.PairGrid(ds, hue="species", hue_kws={"marker": [".", "d", "+"]}, height=2.3, aspect=1.9)                                # Each species is seperated by color and marker 
+      g.map_diag(plt.hist, histtype="step", linewidth=3, bins=20)                                                                     # Histograms are created diagonally where bins, histtep was
+      g.map_offdiag(plt.scatter)                                                                                                      # Scatterplots are created in the remaining figure 
+      g.add_legend()                                                                                                                  # Add legend
+      g.fig.suptitle("Fisher Iris Pairplot using histogram and scatterplot", fontweight="bold", fontsize="12", color="g" )            # Overall heading for the graph  
+      g.fig.subplots_adjust(top=.9)                                                                                                   # Leave space so it does not cover the figure
+      plt.show()                          # Display the pairplot                                                       
+</p>
+</details>
+
+![Distplots by Attribute](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/pairplot2.PNG)
 
 <a name="scatter"></a>
 ### Scatterplot:
@@ -657,6 +688,11 @@ Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Proj
 5. Wikipedia. 2019. Histogram - Wikipedia. [ONLINE] Available at: https://en.wikipedia.org/wiki/Histogram#cite_note-2.
 
 6. George Seif. 2019. 5 Quick and Easy Data Visualizations in Python with Code. [ONLINE] Available at: https://towardsdatascience.com/5-quick-and-easy-data-visualizations-in-python-with-code-a2284bae952f.
+
 7. ZerosnOnes. 2019. Pair Plots - ZerosnOnes. [ONLINE] Available at: http://zerosnones.net/pair-plots
+
 8. Digital Vidya. 2019. Data Visualization In Python. [ONLINE] Available at: https://www.digitalvidya.com/blog/introduction-data-visualization-in-python/.
+
 9. UCI Machine Learning Repository: Iris Data Set. 2019. UCI Machine Learning Repository: Iris Data Set. [ONLINE] Available at: http://archive.ics.uci.edu/ml/datasets/iris.
+
+10. Will Koehrsen. 2019. Visualizing Data with Pairs Plots in Python – Towards Data Science. [ONLINE] Available at: https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166.
