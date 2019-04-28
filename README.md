@@ -136,7 +136,7 @@ ds = pd.read_csv("iris.csv", delimiter=",")                                     
 <a name="disc"></a>
 ## Discrepancies in the Iris Data Set:
 
-Steve Chadwick identified a number of discrepancies between the dataset used in this project and the data originally published by Fisher. The differences are outlined below and affect the Iris Setosa species:
+Steve Chadwick identified a number of discrepancies between the dataset used in this project and the data originally published by Fisher [9]. The differences are outlined below and affect the Iris Setosa species:
 
 |Sample Number  | Iris Feature  |     FisherOriginal Data  | Data used  |
 | ------------- | ------------- |  -------------  | ------------- |
