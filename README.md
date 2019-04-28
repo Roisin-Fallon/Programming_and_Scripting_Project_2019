@@ -565,7 +565,8 @@ D. Summarise the data for iris virginica.
 <a name="hist"></a>
 ### Histograms
 
-<p> Histograms are a graphical representation of the distribution of the data set. A histogram displays the single quantitative variable along the x axis and frequency of that variable on the y axis. Frequency is represented by the area of each rectangle. Each of the species are included on the same plot which is done by overlayng the histograms by setting the transparency to 0.5 it allows us to see what is behind each of the 3 plots. 
+<p> Histograms are a graphical representation of the distribution of the data set. A histogram displays the single quantitative variable along the x axis and frequency of that variable on the y axis. Histogram basically represents how many points exist for each value on the x-axis. Each of the species are included on the same plot which is done by overlayng the histograms by setting the transparency to 0.5 it allows us to see what is behind each of the 3 plots. Histogram basically represents how many points exist for each value on the x-axis.
+
 </p>
 <p> The distinguishing feature of a histogram is that data is grouped into "bins", which are intervals on the x-axis.  Bin involves dividing the iris dataset values into a series of intervals and then count the number of values that fall into each interval [5]. By default bin size is set to 10. It is important to pick a bin size that is suitable for your data set, the goal is to have a bin number where we can see the finer information (more bins) while not losing the bigger picture (less bins) [6]. In creating this figure I decided to use the for loop as it built on knowledge gained using for loops in the Programming and Scripting module, this required the use of sklearn. 
 
@@ -599,7 +600,7 @@ D. Summarise the data for iris virginica.
 <a name="dist"></a>
 ## Distplot:
 
-Displot combines the function of a histogram and the KDE (densities)plot into the same plot using the seaborn package. 
+Displot combines the function of a histogram and the KDE (density) plot into the same plot using the seaborn package. The x-axis represents a feature e.g. petal length and the y-axis is a count of the number oof points that exist in the given range. Thus, we can  determine how many points are in particular regions. For the petal length we can see that a lot of the iris setosa points lie in the range 1.5 while iris versicolor points lie in the region 4.8 [14].
 
 <details><summary>Python Code</summary>
    
@@ -788,3 +789,5 @@ Iris setosa can be easily distinguished from the other species. There is some ov
 12. Suruchi Fialoke. 2019. Classification of Iris Varieties. [ONLINE] Available at: http://suruchifialoke.com/2016-10-13-machine-learning-tutorial-iris-classification/.
 
 13. Khan Academy. 2019. Scatterplots and correlation review (article) | Khan Academy. [ONLINE] Available at: https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/introduction-to-scatterplots/a/scatterplots-and-correlation-review.
+
+14. Nishant Bhushan. 2019. Exploratory Data Analysis on Iris Dataset – DevMins – Medium. [ONLINE] Available at: https://medium.com/devmins/exploratory-data-analysis-on-iris-dataset-7da027acca02. 
