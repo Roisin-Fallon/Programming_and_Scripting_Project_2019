@@ -22,6 +22,7 @@
 9. [Visualize the dataset](#visualize)
     * [Boxplot](#box)
     * [ Histograms ](#hist)
+    * [ Histograms ](#dist)
     * [ Scatterplot ](#scatter)
     * [ Pairplot ](#pair)
 10. [Conclusion](#con)
@@ -37,9 +38,8 @@
    <img src="http://people.wku.edu/charles.smith/chronob/ANDERSON.jpg" width="300" title="Edgar Anderson" > <img src="http://www.genetics.org/content/genetics/154/4/1419/F1.medium.gif " width="263" title="Ronald Fisher"> 
 </p>
 
-The iris dataset originated from research carried out by Edgar Anderson (American botanist) in 1935, whom collected three species of the iris flower with a goal to quantify the morphological variation. Two of the three species were collected in the  Gaspé Peninsula "The irises of the Gaspé Peninsula".[11]. 
+The iris dataset originated from research carried out by Edgar Anderson (American botanist) in 1935, whom collected three species of the iris flower with a goal to quantify the morphological variation. Two of the three species were collected in the Gaspé Peninsula "The irises of the Gaspé Peninsula".[11]. 
   
- 
 Ronald Fisher adapted Anderson data to determine if linear regression could be applied to this data set. In 1936 Fisher published a paper “maximize the ratio of the difference between the specific means to the standard deviation within species”.  [2;1]  It is important to understand that Fisher focused on the linear discrimination analysis. The Iris flower data set or Fisher’s Iris data set is a multivariate data set introduced by Sir Ronald Fisher (1936) as an example of discriminant analysis.[1]
   
 Since its publication Fisher's paper has been cited over 2000 times [12]. An interesting feature of this dataset is that only one of the 3 species is linearly seperable from the others. 
@@ -692,7 +692,6 @@ Note I have decided to code one of the pairplots using sns.pairplot function whi
 
 Scatter plots  is a 2D visualation of the iris dataset. Its shows the bivariate relationship between 2 variables  but does not indicate the strength of the relationship between them. Each member of the dataset gets plotted as a point whose (x, y)  coordinates relates to its values for the two variables [13]. Scatter plot shows the relationship between two variable but does not indicates the strength of relationship amongst them.
 
-Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/scatterplot.py
 
 <details><summary>Python Code</summary>
 <p> 
@@ -732,11 +731,11 @@ Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Proj
 <a name="con"></a>
 ## Conclusion:
 
-By completing this project based on the iris data set, it has combined the knowledge that I have gained through the Programming and Scripting module provided by GMIT while allowing me to research further ways to represent a data set. This project confirms the idea that Iris Setosa is easier to distinguish from the 3 species. This project demonstrates how t effictively visualise a dataset using python by using a combination of plots outlined above. A good understanding of your dataset with repects its deminisions is essential prior to visualising the dataset. 
+By completing this project based on the iris data set, it has combined the knowledge that I have gained through the Programming and Scripting module provided by GMIT while allowing me to research further ways to represent a data set. This project confirms the idea that Iris Setosa is easier to distinguish from the other 2 species. This project demonstrates how to effictively visualise a dataset using a combination of plots through python code outlined above. A good understanding of your dataset with repects its deminisions is essential prior to visualising the dataset. 
 
 ### Findings:
 
-Statistics of the iris dataset is a great way to become familiar with the dataset. It gives us a numerical representation of the datatset. 
+Statistics of the iris dataset is a great way to become familiar as it gives a numerical representation of the datatset. 
 
 ### Boxplots:
 
@@ -744,21 +743,17 @@ The boxplot for the overall dataset where species has not been distinguished:
 The sepal length and width appear to be relatively well distributed with sepal width having outliers present. The petal width and in particular petal length have a much greater spread evidenced by the bigger box size and the location of the median. 
 
 Boxplots seperated by species: 
-Iris setosa can be separated from the other species by the petal length as it has shortest petals. One of the big advantages of boxplots is it shows the presence of outliers, it is important to know this as they can impact on the result of your mean and standard deviation. If the sepal length is less than 4.9cm it can be classified as Iris Setosa and if the sepal length is greater than 7 than the iris can be classified as virginica. 
-
-The petal length of virginica allows a better discrimination to versicolor than the sepal length. 
+Iris setosa can be separated from the other species by the petal length as it has shortest petals. One of the big advantages of boxplots is it shows the presence of outliers, it is important to know this as they can impact on the result of your mean and standard deviation.
 
 ### Histograms and Distplots:
 
-Petal length - Iris setosa can be seperated with no visible overlap with the other iris species. Iris setosa can be distinguished as a petal length of <= to 2. A petal length of >2 and <4.7 can there is a hogher chance that it is versicolor and the remianing virginica. However, it is not as easy to distinguish the petal length for versicolor and virginica as they overlap. 
+Petal length - Iris setosa can be seperated with no visible overlap with the other iris species. Iris setosa can be distinguished as a petal length <= 2. A petal length of > 2 and < 4.7 there is a higher probability it is versicolor. However, this is not definitive as some of the virginica and versicolor points overlap.
 
 Petal width- Iris setosa can be again be seperated from the other 2 species. The other species are overlapped once again so cannot be clearly distinguished. The better of the two so far is petal length as the distribution is further in the petal length.
 
 Sepal length – there is no clear seperation in the species as they overlap each other. Hence sepal length is not the best variable to separate the species in distplot. 
-Petal length < 2 can be classified as setosa species 
 
-Sepal width – similar to sepal length speration of the iris species is near impossible,. In fact  virginica and versicolor are almost fully overlapped.
-
+Sepal width – similar to sepal length speration of the iris species is near impossible. In fact  virginica and versicolor are almost fully overlapped.
 
 ### Scatter plots:
 Petal length and width have a linear relationship which is evident as they increase proportionally. Sepal length and width do not have a linear relationship. From the scatter plots it can clearly be seen that Iris setosa occupy the higher values for sepal length while Iris Virginica occupy the highest values for sepal width.  Iris versicolour remian in the middle values for the both sepal length and the sepal width.
