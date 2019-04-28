@@ -348,7 +348,38 @@ Lists the last 4 rows for virginica species.
 <a name="stat"></a>
 ## Statistics of the iris dataset:
 
-A. Summarise the data for iris overall dataset. This is a more efficient method than coding median, mean, min, max, standard deviation separately.
+A. Summarise the data for iris overall dataset. 
+
+There are two ways to calculate this (both outlined below). It is clear the describe function is a much more efficient, less verbose and visually pleasing method than the alternative approach of coding the mean, median, min, max and standard deviation separately. 
+
+<details><summary>More verbose method to summarise the iris dataset</summary>
+<p>
+ 
+      # The describe method can also be coded in another way, however this is more verbose and is not visually as pleasing:
+
+      print ("Mean of the iris datset")                   # Title 
+      print(ds.mean())                                    # Mean of the iris dataset
+      print("\n")                                         # Line Break
+
+      print ("Median of the iris datset")                 # Title 
+      print(ds.median())                                  # Median of the iris dataset
+      print("\n")                                         # Line Break
+
+      print ("Minimum of the iris datset")                # Title 
+      print(ds.min)                                       # Minimum of the iris dataset
+      print("\n")                                         # Line Break
+
+      print ("Max of the iris datset")                    # Title 
+      print(ds.max())                                     # Max of the iris dataset
+      print("\n")                                         # Line Break
+
+      print ("Standard deviation of the iris datset")     # Title 
+      print(ds.std())                                     # Standard deviation of the iris dataset
+      print("\n")                                         # Line Break
+
+
+</p>
+</details>
 
 <details><summary>Python Code</summary>
 <p>
@@ -404,34 +435,6 @@ D. Summarise the data for iris virginica.
 
 ![describe virginica](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/describe-virginica.PNG)
 
-<details><summary>More verbose method to summarise the iris dataset</summary>
-<p>
- 
-      # The describe method can also be coded in another way, however this is more verbose and is not visually as pleasing:
-
-      print ("Mean of the iris datset")                   # Title 
-      print(ds.mean())                                    # Mean of the iris dataset
-      print("\n")                                         # Line Break
-
-      print ("Median of the iris datset")                 # Title 
-      print(ds.median())                                  # Median of the iris dataset
-      print("\n")                                         # Line Break
-
-      print ("Minimum of the iris datset")                # Title 
-      print(ds.min)                                       # Minimum of the iris dataset
-      print("\n")                                         # Line Break
-
-      print ("Max of the iris datset")                    # Title 
-      print(ds.max())                                     # Max of the iris dataset
-      print("\n")                                         # Line Break
-
-      print ("Standard deviation of the iris datset")     # Title 
-      print(ds.std())                                     # Standard deviation of the iris dataset
-      print("\n")                                         # Line Break
-
-
-</p>
-</details>
 
 <a name="visualize"></a>
 ### Visualize the dataset:
