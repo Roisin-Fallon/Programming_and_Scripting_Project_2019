@@ -40,10 +40,7 @@
 
 The iris dataset originated from research carried out by Edgar Anderson (American botanist) in 1935, whom collected three species of the iris flower with a goal to quantify the morphological variation. Two of the three species were collected in the Gaspé Peninsula "The irises of the Gaspé Peninsula".[11]. 
   
-Ronald Fisher adapted Anderson data to determine if linear regression could be applied to this data set. In 1936 Fisher published a paper “maximize the ratio of the difference between the specific means to the standard deviation within species”.  [2;1]  It is important to understand that Fisher focused on the linear discrimination analysis. The Iris flower data set or Fisher’s Iris data set is a multivariate data set introduced by Sir Ronald Fisher (1936) as an example of discriminant analysis.[1]
-  
-Since its publication Fisher's paper has been cited over 2000 times [12]. An interesting feature of this dataset is that only one of the 3 species is linearly seperable from the others. 
-
+Ronald Fisher adapted Anderson data to determine if linear regression could be applied to this data set. In 1936 Fisher published a paper “maximize the ratio of the difference between the specific means to the standard deviation within species”.  [2;1]  It is important to understand that Fisher focused on the linear discrimination analysis. The Iris flower data set or Fisher’s Iris data set is a multivariate data set introduced by Sir Ronald Fisher (1936) as an example of discriminant analysis.[1] Since its publication Fisher's paper has been cited over 2000 times [12]. 
   
  <a name="data"></a>
  ## Data Set:
