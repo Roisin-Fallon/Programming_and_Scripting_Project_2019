@@ -96,6 +96,28 @@ print("Summary statistics for iris virginica dataset:")
 print(virginica.describe())
 print("\n")
 
+# The describe method can also be coded in another way, however this is more verbose and is not visually as pleasing:
+
+print ("Mean of the iris datset")                   # Title 
+print(ds.mean())                                    # Mean of the iris dataset
+print("\n")                                         # Line Break
+
+print ("Median of the iris datset")                 # Title 
+print(ds.median())                                  # Median of the iris dataset
+print("\n")                                         # Line Break
+
+print ("Minimum of the iris datset")                # Title 
+print(ds.min)                                       # Minimum of the iris dataset
+print("\n")                                         # Line Break
+
+print ("Max of the iris datset")                    # Title 
+print(ds.max())                                     # Max of the iris dataset
+print("\n")                                         # Line Break
+
+print ("Standard deviation of the iris datset")     # Title 
+print(ds.std())                                     # Standard deviation of the iris dataset
+print("\n")                                         # Line Break
+
 
 
 
