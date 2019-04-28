@@ -5,10 +5,11 @@
 
 1. [ Introduction ](#intro)
 2. [ Data Set ](#data)
-3. [ Discrepancies in the Iris Dataset ](#disc)
-4. [ Python Libraries ](#lib)
-5. [ Dataset Summary ](#sum)
-6. [ Dataset Summary](#sum)
+3. [ Python Libraries ](#lib)
+4. [ Iris dataset csv ](#lib)
+5. [ Discrepancies in the Iris Dataset ](#disc)
+6. [ Dataset Summary ](#sum)
+7. [ Dataset Summary](#sum)
     * [Shape](#shape)
     * [ Columns ](#columns)
     * [ Info ](#info)
@@ -17,14 +18,14 @@
     * [ Class Distribution ](#class)
     * [ Head of each species ](#head)
     * [ Tail of each species ](#tail)
-7. [Statistics of the Iris Dataset](#stat)
-8. [Visualize the dataset](#visualize)
+8. [Statistics of the Iris Dataset](#stat)
+9. [Visualize the dataset](#visualize)
     * [Boxplot](#box)
     * [ Histograms ](#hist)
     * [ Scatterplot ](#scatter)
     * [ Pairplot ](#pair)
- 9. [Conclusion](#con)
-10. [Bibliography](#bib)
+10. [Conclusion](#con)
+11. [Bibliography](#bib)
     
 
 
@@ -81,22 +82,8 @@ One flower species is linearly separable from the other two, but the other two a
 <img src="https://www.oreilly.com/library/view/python-artificial-intelligence/9781789539462/assets/462dc4fa-fd62-4539-8599-ac80a441382c.png" width="263" title="Attributes measured"> 
 
 </p>
-> 
 
 
-<a name="disc"></a>
- ## Discrepancies in the Iris Data Set:
-
-Steve Chadwick identified a number of discrepancies between the dataset used in this project and the data originally published by Fisher. The differences are outlined below and affect the Iris Setosa species:
-
-|Sample Number  | Iris Feature  |     FisherOriginal Data  | Data used  |
-| ------------- | ------------- |  -------------  | ------------- |
-|      35     	 |  petal_width  |        0.2      |       0.1     |
-|      38       |  sepal_width  |        3.6      |       3.1     |
-|      38       |  petal_length |        1.4      |       1.5     |
-
-  
-<a name="lib"></a>
 ## Python Libraries:
 
 <b> Anaconda on your device (version 3.7 +) </b>
@@ -128,6 +115,36 @@ This is a plotting library, makes  2D plots  that helps in the visualisation of 
 This a satistical plotting library  which has more advanced data visualisation than matplotlib (both are plotting libraries). Seaborn produces nice visualizations eliminating much of the work necessary for producing similar visualizations with matplotlib. It gives a high-level interface to draw statistical graphs, making it easier to generate more complex visualizations. Brief introduction outlined <a href=https://towardsdatascience.com/data-visualization-using-seaborn-fc24db95a850; > here. </a>
 
 https://www.codecademy.com/learn/data-visualization-python/modules/dspath-seaborn
+
+
+<a name="imp"></a>
+
+## Iris dataset csv:
+
+ <a href=https://gist.github.com/curran/a08a1080b88344b0c8a7> Download here </a>
+
+The iris dataset used in this project had headings added prior to its download. Hence I did not need to add headings when file was imported uisng panda. 
+
+<details><summary>Read the iris.csv</summary>
+<p>
+ds = pd.read_csv("iris.csv", delimiter=",")                                                       # Read in the CSV as dataframe
+ 
+</p>
+</details>
+
+<a name="disc"></a>
+## Discrepancies in the Iris Data Set:
+
+Steve Chadwick identified a number of discrepancies between the dataset used in this project and the data originally published by Fisher. The differences are outlined below and affect the Iris Setosa species:
+
+|Sample Number  | Iris Feature  |     FisherOriginal Data  | Data used  |
+| ------------- | ------------- |  -------------  | ------------- |
+|      35     	 |  petal_width  |        0.2      |       0.1     |
+|      38       |  sepal_width  |        3.6      |       3.1     |
+|      38       |  petal_length |        1.4      |       1.5     |
+
+  
+<a name="lib"></a>
 
 <a name="sum"></a>
 # Dataset Summary: 
@@ -386,6 +403,35 @@ D. Summarise the data for iris virginica.
 </details> 
 
 ![describe virginica](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/Summary%20images/describe-virginica.PNG)
+
+<details><summary>More verbose method to summarise the iris dataset</summary>
+<p>
+ 
+      # The describe method can also be coded in another way, however this is more verbose and is not visually as pleasing:
+
+      print ("Mean of the iris datset")                   # Title 
+      print(ds.mean())                                    # Mean of the iris dataset
+      print("\n")                                         # Line Break
+
+      print ("Median of the iris datset")                 # Title 
+      print(ds.median())                                  # Median of the iris dataset
+      print("\n")                                         # Line Break
+
+      print ("Minimum of the iris datset")                # Title 
+      print(ds.min)                                       # Minimum of the iris dataset
+      print("\n")                                         # Line Break
+
+      print ("Max of the iris datset")                    # Title 
+      print(ds.max())                                     # Max of the iris dataset
+      print("\n")                                         # Line Break
+
+      print ("Standard deviation of the iris datset")     # Title 
+      print(ds.std())                                     # Standard deviation of the iris dataset
+      print("\n")                                         # Line Break
+
+
+</p>
+</details>
 
 <a name="visualize"></a>
 ### Visualize the dataset:
