@@ -22,6 +22,9 @@
     * [Boxplot](#box)
     * [ Histograms ](#hist)
     * [ Scatterplot ](#scatter)
+    * [ Pairplot ](#pair)
+ 9. [Conclusion](#con)
+10. [Bibliography](#bib)
     
 
 
@@ -394,7 +397,7 @@ D. Summarise the data for iris virginica.
   - Interquartile range (IQR) = Upper Quartile –Lower Quartile 
 
 
-<b> Advantages: </b> https://sciencing.com/advantages-disadvantages-box-plot-12025269.html; https://math.tutorvista.com/statistics/box-and-whisker-plot.html
+<b> Advantages: </b> [3][4]
 
 1. Clear and easy to understand
 2. Shows the presence of outliers - one of very few statistical graph methods that show outliers
@@ -500,10 +503,39 @@ D. Summarise the data for iris virginica.
 <a name="hist"></a>
 ### Histograms
 
-<details><summary>Python Code</summary>
-<p>
- 
+<p> Histograms are a graphical representation of the distribution of the data set. A histogram displays the single quantitative variable along the x axis and frequency of that variable on the y axis. Frequency is represented by the area of each rectangle. Each of the species are included on the same plot which is done by overlayng the histograms by setting the transparency to 0.5 it allows us to see what is behind each of the 3 plots. 
+</p>
+<p> The distinguishing feature of a histogram is that data is grouped into "bins", which are intervals on the x-axis.  Bin involves dividing the iris dataset values into a series of intervals and then count the number of values that fall into each interval [5]. By default bin size is set to 10. It is important to pick a bin size that is suitable for your data set, the goal is to have a bin number where we can see the finer information (more bins) while not losing the bigger picture (less bins) [6].
 
+</p>
+ 
+ <details><summary>Python Code</summary>
+            
+<p>
+   
+import matplotlib.pyplot as plt
+from sklearn import datasets
+
+      ds= datasets.load_iris()                                                                                                                      # Load the iris data set   
+
+      fig, axes = plt.subplots(2, 2, figsize=(12, 10), dpi=100)                                                                                     # plot the figures 2 rows and 2 columns on the same plot
+      plt.suptitle("Fisher Iris data set represented using Histograms ",fontweight="bold", fontsize="12", color="g" )                               # Title for the overall graph
+      colors= ['dodgerblue', 'orange', 'deeppink']                                                                                                  # colors given to each species                                                        
+
+      for i, ax in enumerate(axes.flat):                                                                                                            #  for statement to produce four histograms in a facetted 2 x 2 grid.
+          for label, color in zip(range(len(ds.target_names)), colors):                                                                             # Iterates through the for loop to add below contents
+              ax.hist(ds.data[ds.target==label, i], label=ds.target_names[label], color=color, bins=20, edgecolor='black', alpha = 0.7)
+              ax.set_xlabel(ds.feature_names[i], fontweight="bold", fontsize="10", color="b")                                                       # Label of the x-axis
+              ax.set_ylabel("Frequency", fontweight="bold", fontsize="10", color="b")                                                               # Label of the y-axis
+              ax.legend()                                                                                                                           # Add legend to the histogram                                                                                                                                                                             
+      plt.show()                                                                                                                                    # Display the boxplot
+</p>
+</details> 
+  ![Distplots by Attribute](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/histogram.PNG)
+ ## Distplot:
+ 
+<details><summary>Python Code</summary>
+   
       f, axes = plt.subplots(2, 2, figsize=(12, 10), dpi=100)                                                         # Figsize and dpi(dot-per-inch)
       plt.suptitle("Fisher Iris Distribution of Data",fontweight="bold", fontsize="12", color="g" )                   # Overall heading for the graph
 
@@ -552,25 +584,29 @@ D. Summarise the data for iris virginica.
 <a name="scatter"></a>
 ### Scatterplots:
 
-    plt.figure(figsize=(12,10))  
+Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/scatterplot.py
+
+ 
     
     # Scatterplot for petal comparasion for each species 
-    
-    plt.subplot(2,2,1)                                                                                              
-    ax = sns.scatterplot(x="petal_length", y="petal_width", hue="species",style= ds.species, data=ds)               
-    plt.xlabel("Petal Length (cm)", fontweight="bold", fontsize="12", color="b")                                    
-    plt.ylabel("Petal Width (cm)", fontweight="bold", fontsize="12", color="b")                                     
-    plt.title("Petal Comparasion for each species", fontweight="bold", fontsize="12", color="r")                    
 
-    # Scatterplot for sepal comparasion for each species
-    
-    plt.subplot(2,2,2)                                                                                              
-    ax = sns.scatterplot(x="sepal_length", y="sepal_width", hue="species",style=ds.species, data=ds)                
-    plt.xlabel("Sepal Length (cm)", fontweight="bold", fontsize="12", color="b")                                    
-    plt.ylabel("Sepal Width (cm)", fontweight="bold", fontsize="12", color="b")                                     
-    plt.title("Sepal Comparasion for each iris species", fontweight="bold", fontsize="12", color="r")              
+      sns.scatterplot(x="petal_length", y="petal_width", hue="species",style= ds.species, data=ds)                    # Plot petal length and width for each species 
+      plt.xlabel("Petal Length (cm)", fontweight="bold", fontsize="12", color="b")                                    # Format of the x-axis
+      plt.ylabel("Petal Width (cm)", fontweight="bold", fontsize="12", color="b")                                     # Format of the y-axis
+      plt.title("Petal Comparasion for each species", fontweight="bold", fontsize="12", color="r")                    # Title of graph
+      plt.show()                                                                                                      # Display the scatterplot
 
-    plt.show()        
+![Scatterplots](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/scatterplot.PNG)
+      # Scatterplot for sepal comparasion for each species 
+
+      sns.scatterplot(x="sepal_length", y="sepal_width", hue="species",style=ds.species, data=ds)                     # Plot sepal length and width for each species 
+      plt.xlabel("Sepal Length (cm)", fontweight="bold", fontsize="12", color="b")                                    # Format of the x-axis
+      plt.ylabel("Sepal Width (cm)", fontweight="bold", fontsize="12", color="b")                                     # Format of the y-axis
+      plt.title("Sepal Comparasion for each iris species", fontweight="bold", fontsize="12", color="r")               # Title of graph
+
+      plt.show()    
+      
+       
 
 ![Scatterplots](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/scatterplot.PNG)
  ## Bibliography:
@@ -578,3 +614,10 @@ D. Summarise the data for iris virginica.
 
 2. Ronald A Fisher, The Use of Multiple Measurements in Taxonomic Problems, Annals of Eugenics 7 (1936), no. 2, 179–18
  
+ 3. Box and Whisker Plot | Math@TutorVista.com. 2019. Box and Whisker Plot | Math@TutorVista.com. [ONLINE] Available at: https://math.tutorvista.com/statistics/box-and-whisker-plot.html.
+
+4. Sciencing. 2019. Advantages & Disadvantages of a Box Plot | Sciencing. [ONLINE] Available at: https://sciencing.com/advantages-disadvantages-box-plot-12025269.html.
+
+5. Wikipedia. 2019. Histogram - Wikipedia. [ONLINE] Available at: https://en.wikipedia.org/wiki/Histogram#cite_note-2.
+
+6. George Seif. 2019. 5 Quick and Easy Data Visualizations in Python with Code. [ONLINE] Available at: https://towardsdatascience.com/5-quick-and-easy-data-visualizations-in-python-with-code-a2284bae952f.
