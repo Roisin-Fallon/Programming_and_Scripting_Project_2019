@@ -32,7 +32,10 @@
 <a name="intro"></a>
 ### Introduction:
 
- <img src="http://people.wku.edu/charles.smith/chronob/ANDERSON.jpg" width="300" title="Edgar Anderson" > <img src="http://www.genetics.org/content/genetics/154/4/1419/F1.medium.gif " width="263" title="Ronald Fisher"> 
+<p align="center">
+   <img src="http://people.wku.edu/charles.smith/chronob/ANDERSON.jpg" width="300" title="Edgar Anderson" > <img src="http://www.genetics.org/content/genetics/154/4/1419/F1.medium.gif " width="263" title="Ronald Fisher"> 
+</p>
+
 <p>
 The iris dataset originated from research carried out by Edgar Anderson (American botanist) in 1935, whom collected three species of the iris flower with a goal to quantify the morphological variation.  In 1936 Ronald Fisher adapted this data published a paper “maximize the ratio of the difference between the specific means to the standard deviation within species”.  adapted Anderson data to determine if linear regression could be used/applied  
  The iris dataset originated from research carried out by Edgar Anderson (American botanist) in 1935, whom collected three species of the iris flower with a goal to quantify the morphological variation. Two of the three species were collected in the  Gaspé Peninsula ”The irises of the Gaspé Peninsula". 
@@ -40,12 +43,13 @@ The iris dataset originated from research carried out by Edgar Anderson (America
   
 <p>
 Ronald Fisher adapted Anderson data to determine if linear regression could be used/applied . In 1936 Fisher published a paper “maximize the ratio of the difference between the specific means to the standard deviation within species”.  [2;1]  It is important to understand that Fisher focused on the linear discrimination analysis. The Iris flower data set or Fisher’s Iris data set is a multivariate data set introduced by Sir Ronald Fisher (1936) as an example of discriminant analysis.[1]
-  </p> 
+ </p> 
   
  <a name="data"></a>
  ## Data Set:
- 
+ <p align="center">
  <img src="https://sudaniscience.files.wordpress.com/2018/10/9.png?w=720 " width="800" title="Iris flower species"> 
+</p>
  
 Is dataset is multivariate which involves analysis of two or more variables
 
@@ -73,12 +77,18 @@ Image below depicts the difference between the petal and sepal.  Sepal is define
 Based on the combination of the four numeric features, the classification of the iris flower is made.  
 One flower species is linearly separable from the other two, but the other two are not linearly separable from each other.
  
- <img src="https://www.oreilly.com/library/view/python-artificial-intelligence/9781789539462/assets/462dc4fa-fd62-4539-8599-ac80a441382c.png" width="263" title="Attributes measured"> 
+ <p align="center">
+<img src="https://www.oreilly.com/library/view/python-artificial-intelligence/9781789539462/assets/462dc4fa-fd62-4539-8599-ac80a441382c.png" width="263" title="Attributes measured"> 
+
+</p>
+> 
 
 
 <a name="disc"></a>
  ## Discrepancies in the Iris Data Set:
- 
+
+Steve Chadwick identified a number of discrepancies between the dataset used in this project and the data originally published by Fisher. The differences are outlined below and affect the Iris Setosa species:
+
 |Sample Number  | Iris Feature  |     FisherOriginal Data  | Data used  |
 | ------------- | ------------- |  -------------  | ------------- |
 |      35     	 |  petal_width  |        0.2      |       0.1     |
@@ -584,9 +594,16 @@ from sklearn import datasets
  
 ![Distplots by Attribute](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/dist.PNG)
 
-<a name="scatter"></a>
+<a name="pair"></a>
+## Pairplot:
+<p>
+ A pairplot  can be divided into 2 parts:
 
-### Scatterplots:
+Below the diagonal axis represents histogram (Image 1) or distplot (Image 2) corresponding to the feature of that row . The histogram as stated above shows the univariate  distribution of the data. While thes scatterplot demonstrate the bivariate relationship between multiple pairwise features in the Iris data set. [7; 8]
+
+
+<a name="scatter"></a>
+### Scatterplot:
 
 Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/scatterplot.py
 
@@ -601,9 +618,10 @@ Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Proj
       plt.title("Petal Comparasion for each species", fontweight="bold", fontsize="12", color="r")                    # Title of graph
       plt.show()                                                                                                      # Display the scatterplot
 </p>
-</details> 
+</details>
 
 ![Scatterplots](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/scatterplot.PNG)
+
  
  <details><summary>Python Code</summary>
 <p>      
@@ -618,7 +636,10 @@ Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Proj
 </p>
 </details> 
 
+
 ![Scatterplots](https://github.com/Roisin-Fallon/Programming_and_Scripting_Project_2019/blob/master/scatterplot2.PNG)
+
+
 
 <a name="con"></a>
 ## Conclusion
@@ -636,3 +657,6 @@ Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Proj
 5. Wikipedia. 2019. Histogram - Wikipedia. [ONLINE] Available at: https://en.wikipedia.org/wiki/Histogram#cite_note-2.
 
 6. George Seif. 2019. 5 Quick and Easy Data Visualizations in Python with Code. [ONLINE] Available at: https://towardsdatascience.com/5-quick-and-easy-data-visualizations-in-python-with-code-a2284bae952f.
+7. ZerosnOnes. 2019. Pair Plots - ZerosnOnes. [ONLINE] Available at: http://zerosnones.net/pair-plots
+8. Digital Vidya. 2019. Data Visualization In Python. [ONLINE] Available at: https://www.digitalvidya.com/blog/introduction-data-visualization-in-python/.
+9. UCI Machine Learning Repository: Iris Data Set. 2019. UCI Machine Learning Repository: Iris Data Set. [ONLINE] Available at: http://archive.ics.uci.edu/ml/datasets/iris.
