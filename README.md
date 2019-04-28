@@ -37,14 +37,13 @@
    <img src="http://people.wku.edu/charles.smith/chronob/ANDERSON.jpg" width="300" title="Edgar Anderson" > <img src="http://www.genetics.org/content/genetics/154/4/1419/F1.medium.gif " width="263" title="Ronald Fisher"> 
 </p>
 
-<p>
-The iris dataset originated from research carried out by Edgar Anderson (American botanist) in 1935, whom collected three species of the iris flower with a goal to quantify the morphological variation.  In 1936 Ronald Fisher adapted this data published a paper “maximize the ratio of the difference between the specific means to the standard deviation within species”.  adapted Anderson data to determine if linear regression could be used/applied  
- The iris dataset originated from research carried out by Edgar Anderson (American botanist) in 1935, whom collected three species of the iris flower with a goal to quantify the morphological variation. Two of the three species were collected in the  Gaspé Peninsula ”The irises of the Gaspé Peninsula". 
- </p> 
+The iris dataset originated from research carried out by Edgar Anderson (American botanist) in 1935, whom collected three species of the iris flower with a goal to quantify the morphological variation. Two of the three species were collected in the  Gaspé Peninsula "The irises of the Gaspé Peninsula".[11]. 
   
-<p>
-Ronald Fisher adapted Anderson data to determine if linear regression could be used/applied . In 1936 Fisher published a paper “maximize the ratio of the difference between the specific means to the standard deviation within species”.  [2;1]  It is important to understand that Fisher focused on the linear discrimination analysis. The Iris flower data set or Fisher’s Iris data set is a multivariate data set introduced by Sir Ronald Fisher (1936) as an example of discriminant analysis.[1]
- </p> 
+ 
+Ronald Fisher adapted Anderson data to determine if linear regression could be applied to this data set. In 1936 Fisher published a paper “maximize the ratio of the difference between the specific means to the standard deviation within species”.  [2;1]  It is important to understand that Fisher focused on the linear discrimination analysis. The Iris flower data set or Fisher’s Iris data set is a multivariate data set introduced by Sir Ronald Fisher (1936) as an example of discriminant analysis.[1]
+  
+Since its publication Fisher's paper has been cited over 2000 times [12]. An interesting feature of this dataset is that only one of the 3 species is linearly seperable from the others. 
+
   
  <a name="data"></a>
  ## Data Set:
@@ -650,7 +649,7 @@ from sklearn import datasets
 
 Below the diagonal axis represents histogram (Image 1) or distplot (Image 2) corresponding to the feature of that row . The histogram as stated above shows the univariate  distribution of the data. While thes scatterplot demonstrate the bivariate relationship between multiple pairwise features in the Iris data set [7; 8]. 
 
-Note I have decided to code one of the pairplots using sns.pairplot function while in the second I use sns.PairGrid which demonstrates pairplots can be coded in more than one way using seaborn. The sns.PairGrid is a class and hence requires plots to be filled in manually which explains why there are more lines required to plot essentially the same figure [10].
+Note I have decided to code one of the pairplots using sns.pairplot function while in the second I use sns.PairGrid which demonstrates pairplots can be coded in more than one way using seaborn. The sns.PairGrid is a class and hence requires plots to be filled in manually which explains why there are more lines required to plot essentially the same figure [10]. A regression line was added to one of the scatterplots. 
 
  <details><summary>Python Code</summary>
 <p> 
@@ -722,7 +721,45 @@ Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Proj
 
 
 <a name="con"></a>
-## Conclusion
+## Conclusion:
+By completing this project based on the iris data set, it has combined the knowledge that I have gained through the Programming and Scripting module provided by GMIT while allowing me to research further ways to represent a data set. This project confirms the idea that Iris Setosa is easier to distinguish from the 3 species. 
+
+### Main findings:
+
+Statistics of the iris dataset is a great way to become familiar with the dataset. It gives us a numerical representation of the datatset. 
+
+### Boxplots:
+
+The boxplot for the overall dataset where species has not been distinguished:
+The sepal length and width appear to be relatively well distributed with sepal width having outliers present. The petal width and in particular petal length have a much greater spread evidenced by the bigger box size and the location of the median. 
+
+Boxplots seperated by species: 
+Iris setosa can be separated from the other species by the petal length as it has shortest petals. One of the big advantages of boxplots is it shows the presence of outliers, it is important to know this as they can impact on the result of your mean and standard deviation. If the sepal length is less than 4.9cm it can be classified as Iris Setosa and if the sepal length is greater than 7 than the iris can be classified as virginica. 
+
+The petal length of virginica allows a better discrimination to versicolor than the sepal length. 
+
+### Histograms and Distplots:
+
+
+Due to Petal length anf width are skewed to the left, I would be caution using its mean. The Setosa Petal length and width are concentrated on the far left from the rest of the Species which is very interesting!
+
+For each of the features of the iris data set I have included each species on the same plot.  We can see that in some distribution plots the species do not overlap e.g. Petal Length where as with other features they are more difficult to distinguish e.g. Sepal Width. From the graphs we can see that two of the variables seem to indicate a bell shaped curve or Normal distribution. 
+
+Petal length - Iris setosa can be seperated with no visible overlap with the other iris species. Iris setosa can be distinguished as a petal length of less than or equal to 2.  it is not as easy to distinguish the petal length for versicolor and virginica.
+
+Petal width- Iris setosa can be again be seperated from the other 2 species. The other species are overlapped once again so cannot be clearly distinguished. The better of the two so far is petal length as the distribution is further in the petal length.
+
+Sepal length – there is no clear seperation in the species as they overlap each other. Hence sepal length is not the best variable to separate the species in distplot. 
+
+Sepal width – similar to sepal length speration of the iris species is near impossible,. In fact  virginica and versicolor are almost fully overlapped.
+
+### Scatter plots:
+Petal length and width have a linear relationship which is evident as they increase proportionally. Sepal length and width do not have a linear relationship. From the scatter plots it can clearly be seen that Iris setosa occupy the higher values for sepal length while Iris Virginica occupy the highest values for sepal width.  Iris versicolour remian in the middle values for the both sepal length and the sepal width.
+
+Iris setosa can be easily distinguished from the other species. There is some overlap between virginica and versicolor which confirms Fisher findings. 
+
+The above findings confirm that Iris Setosa is linearly seperable from the other species. 
+In addition petal length of virginica allows a better discrimination to versicolor than the sepal length.
 
 <a name="bib"></a>
  ## Bibliography:
@@ -745,3 +782,7 @@ Link to run code https://github.com/Roisin-Fallon/Programming_and_Scripting_Proj
 9. UCI Machine Learning Repository: Iris Data Set. 2019. UCI Machine Learning Repository: Iris Data Set. [ONLINE] Available at: http://archive.ics.uci.edu/ml/datasets/iris.
 
 10. Will Koehrsen. 2019. Visualizing Data with Pairs Plots in Python – Towards Data Science. [ONLINE] Available at: https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166.
+
+11. Anderson, Edgar. 1935. “The Irises of the Gaspe Peninsula.” Bulletin of the American Iris Society 59: 2–5.
+
+12. Suruchi Fialoke. 2019. Classification of Iris Varieties. [ONLINE] Available at: http://suruchifialoke.com/2016-10-13-machine-learning-tutorial-iris-classification/. 
